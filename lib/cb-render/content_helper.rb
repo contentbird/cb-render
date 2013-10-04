@@ -5,17 +5,21 @@ module ContentHelper
   def default_options
     {display_label: true}
   end
+
   def display_content_property name, data, options={}
     self.send("display_#{data['type']}_property", name, data, options)
   end
 
   def display_image_property name, data, options={}
-    image_tag data['value'], alt: data['title']
+    options  = default_options.merge(options)
+    content_tag :figure, class: options[:wrapper_class] do
+      image_tag data['value'], alt: data['title']
+    end
   end
 
   def display_text_property name, data, options={}
     options  = default_options.merge(options)
-    content_tag :p do
+    content_tag :p, class: options[:wrapper_class] do
       if options[:display_label]
         "#{data['title']}: #{data['value']}"
       else
