@@ -15,19 +15,23 @@ module ContentHelper
 
   def display_text_property name, data, options={}
     options  = default_options.merge(options)
-    if options[:display_label]
-      "#{data['title']}: #{data['value']}"
-    else
-      data['value']
+    content_tag :p do
+      if options[:display_label]
+        "#{data['title']}: #{data['value']}"
+      else
+        data['value']
+      end
     end
   end
 
   def display_memo_property name, data, options={}
     options  = default_options.merge(options)
-    if options[:display_label]
-      "#{data['title']}: #{simple_format(data['value'])}"
-    else
-      simple_format(data['value'])
+    content_tag :p do
+      if options[:display_label]
+        raw("#{data['title']}: #{simple_format(data['value'])}")
+      else
+        simple_format(data['value'])
+      end
     end
   end
 
