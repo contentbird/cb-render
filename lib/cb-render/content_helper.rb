@@ -2,6 +2,9 @@ require 'redcarpet'
 require 'pygments.rb'
 
 module ContentHelper
+  def default_options
+    {display_label: true}
+  end
   def display_content_property name, data, options={}
     self.send("display_#{data['type']}_property", name, data, options)
   end
@@ -11,11 +14,21 @@ module ContentHelper
   end
 
   def display_text_property name, data, options={}
-    content_tag :p, "#{data['title']}: #{data['value']}"
+    options  = default_options.merge(options)
+    if options[:display_label]
+      "#{data['title']}: #{data['value']}"
+    else
+      data['value']
+    end
   end
 
   def display_memo_property name, data, options={}
-    content_tag :p, raw("#{data['title']}: <br />#{simple_format(data['value'])}")
+    options  = default_options.merge(options)
+    if options[:display_label]
+      "#{data['title']}: #{simple_format(data['value'])}"
+    else
+      simple_format(data['value'])
+    end
   end
 
   def display_markdown_property name, data, options={}
