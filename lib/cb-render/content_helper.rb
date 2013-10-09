@@ -12,14 +12,14 @@ module ContentHelper
 
   def display_image_property name, data, options={}
     options  = default_options.merge(options)
-    content_tag :figure, class: options[:wrapper_class] do
+    content_tag :figure, class: "cb-type-image cb-prop-#{name} #{options[:wrapper_class]}" do
       image_tag data['value'], alt: data['title']
     end
   end
 
   def display_text_property name, data, options={}
     options  = default_options.merge(options)
-    content_tag :p, class: options[:wrapper_class] do
+    content_tag :p, class: "cb-type-text cb-prop-#{name} #{options[:wrapper_class]}" do
       if options[:display_label]
         "#{data['title']}: #{data['value']}"
       else
@@ -30,7 +30,7 @@ module ContentHelper
 
   def display_memo_property name, data, options={}
     options  = default_options.merge(options)
-    content_tag :p do
+    content_tag :p, class: "cb-type-memo cb-prop-#{name}" do
       if options[:display_label]
         raw("#{data['title']}: #{simple_format(data['value'])}")
       else
@@ -40,7 +40,9 @@ module ContentHelper
   end
 
   def display_markdown_property name, data, options={}
-    markdown data['value'], options
+    content_tag :div, class: "cb-type-markdown cb-prop-#{name}" do
+      markdown data['value'], options
+    end
   end
 
   class HTMLwithPygments < Redcarpet::Render::HTML
