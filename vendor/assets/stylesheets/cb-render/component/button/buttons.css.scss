@@ -10,8 +10,14 @@
     &.togl-on{
         background-color: $green;
     }
-    &.togl-off{
-        background-color: $red;
+    &.togl-off {
+        background-color: $white;
+        border: 2px solid $lightGray;
+        color: $gray;
+        &:hover {
+            border: 2px solid $green;
+            color: $gray;
+        }
     }
     &.togl-work{
         // spinning loader
