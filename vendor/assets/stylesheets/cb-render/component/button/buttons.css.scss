@@ -9,6 +9,7 @@
     }
     &.togl-on{
         background-color: $green;
+        border: 2px solid $green;
     }
     &.togl-off {
         background-color: $white;
@@ -21,6 +22,7 @@
     }
     &.togl-work{
         // spinning loader
+        border: 2px solid $white;
     }
     &._addFields, &._addFields:hover  {
         display: block;
