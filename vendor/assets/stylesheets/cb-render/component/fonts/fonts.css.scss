@@ -1,5 +1,3 @@
-@import "cb-render/globals/all.css.scss";
-
 @font-face {
     font-family: 'contentbird';
     src:asset-url('contentbird.eot');
@@ -33,7 +31,7 @@
 
 nav [data-icon] {
     color: $white;
-} 
+}
 
 .selected[data-icon] {
     color: $darkGray;
@@ -44,15 +42,15 @@ nav [data-icon]:before {
 }
 
 .collapseMenu[data-icon]:before {
-    font-size: $smallSizeText; 
+    font-size: $smallSizeText;
     position: fixed;
     bottom: $padding;
-} 
+}
 
 .widthMenu .collapseMenu[data-icon]:before {
     content: "\e018";
 
-} 
+}
 
 .remove, ._removeFields {
     color: $darkGray;

@@ -8,9 +8,6 @@ CSS GUIDE
 		ft = footer;
 */
 
-/* vars */
-@import "cb-render/globals/all.css.scss";
-
 /* box module */
 .box {
 	background: $white;
@@ -70,9 +67,9 @@ CSS GUIDE
 }
 
 .modal {
-	& .box { 
+	& .box {
 		background: $darkGray;
 		color: $white;
-	} 
+	}
 }
 
