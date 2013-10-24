@@ -1,54 +1,63 @@
 @import "cb-render/globals/all.css.scss";
 
 .butn {
-	padding: $padding/2;
-	border: none;
-	background-color: $gray;
-	color: $white;
-	display: inline-block;
-	&.action{
-		background-color: $blue;
-	}
-	&._addFields, &._addFields:hover  {
-		display: block;
-		border: 2px dashed $darkGray;
-		background-color: $white;
-		color: $darkGray;
-	}
-	&.delete{
-		background-color: $red;
-	}
-	&:hover {
-		color: $white;
-		opacity: 0.7;
-	}
+    padding: $padding/2;
+    border: none;
+    background-color: $gray;
+    color: $white;
+    display: inline-block;
+    &.action{
+        background-color: $blue;
+    }
+    &.togl-on{
+        background-color: $green;
+    }
+    &.togl-off{
+        background-color: $red;
+    }
+    &.togl-work{
+        // spinning loader
+    }
+    &._addFields, &._addFields:hover  {
+        display: block;
+        border: 2px dashed $darkGray;
+        background-color: $white;
+        color: $darkGray;
+    }
+    &.delete{
+        background-color: $red;
+    }
+    &:hover {
+        color: $white;
+        opacity: 0.7;
+    }
 }
 
 header .butn {
-	float: right;
-	margin-top: 0;
+    float: right;
+    margin-top: 0;
 }
 
 .butnMenu {
-	background: $darkGray;
-	position: absolute;
-	z-index: 1000;
-	margin: auto;
-  	position: absolute;
-  	left: $padding;
-  	right: $padding;
-  	padding: $padding;
-  	color: $white;
-  	& a {
-  		color: white;
-  	}
-	&:after {
-		content: '';
-		position: absolute;
-		margin: auto;
-		left: 0;
-  		right: 0;
-		top: -20px;
-		@include arrow(top, $darkGray, 20px)
-	}
+    background: $darkGray;
+    position: absolute;
+    z-index: 1000;
+    margin: auto;
+    position: absolute;
+    left: $padding;
+    right: $padding;
+    padding: $padding;
+    color: $white;
+    & a {
+        color: white;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: -20px;
+        @include arrow(top, $darkGray, 20px)
+    }
 }
