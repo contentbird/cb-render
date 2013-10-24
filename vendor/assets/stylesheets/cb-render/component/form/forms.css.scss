@@ -1,0 +1,240 @@
+@import "cb-render/globals/all.css.scss";
+
+input[type="email"], input[type="password"], input[type="text"], input[type="search"] {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+input[type="email"], input[type="password"], input[type="text"], input[type="file"], textarea, select  {
+	margin: 0 0 $padding 0;
+	padding: $padding/2;
+	width: 100%;
+	border: 2px solid $white;
+	border-bottom: 2px solid $lightGray;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	-webkit-transition: border .20s linear, color .20s linear;
+	-moz-transition: border .20s linear, color .20s linear;
+	-o-transition: border .20s linear, color .25s linear;
+	transition: border .20s linear, color .20s linear;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-webkit-backface-visibility: hidden;
+}
+
+input[type="search"]{
+	width: 100%;
+	padding: $padding;
+	border: none;
+	border-radius: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-webkit-backface-visibility: hidden;
+	&:focus {
+		outline: 0;
+	}
+}
+
+select {
+	border: 2px solid $lightGray;
+}
+
+input[type="email"]:hover, input[type="password"]:hover, input[type="text"]:hover, textarea:hover, select:hover {
+	border: 2px solid $lightGreen;
+}
+
+input[type="submit"] {
+	padding: 10px $padding;
+	border: none;
+	background-color: $blue;
+	color: $white;
+}
+
+input[type="submit"].signIn, input[type="submit"].signUp {
+	background-color: $green;
+
+}
+
+input[type="email"].inputError , input[type="password"].inputError , input[type="text"].inputError, .inputError._typeSelect {
+	border: 2px solid $darkGray;
+}
+
+input[type="submit"]:hover {
+	opacity: 0.7;
+}
+
+input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focus, textarea:focus, select:focus {
+	outline: 0;
+	border-color: $green;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+input:-webkit-autofill {
+	-webkit-box-shadow:0 0 0 50px $blue inset;
+}
+
+input:-webkit-autofill:focus {
+	-webkit-box-shadow: 0 0 0 50px $white inset;
+}
+
+input[type="text"].formTitle {
+	border: none;
+	font-size: $mediumSizeText;
+	text-align: center;
+}
+
+input[type="text"]:focus.formTitle {
+	background: $focusColor;
+}
+
+/* input type file */
+.fileUpload {
+	position: relative;
+	height: 90px;
+}
+
+.fileinput-button {
+	position: absolute;
+	left: 0;
+	overflow: hidden;
+	& input {
+		position: absolute;
+		right: 0;
+    	bottom: 0;
+		font-size: 130px !important;
+		opacity: 0;
+		cursor: pointer;
+	}
+}
+
+/* fieldset */
+fieldset {
+	margin: 0;
+	padding: $padding 0 0 0;
+	border: none;
+}
+
+.sortable > fieldset:first-of-type {
+	border-top: 1px solid $lightGray;
+}
+
+.sortable > fieldset {
+	border-bottom: 1px solid $lightGray;
+}
+
+/* label */
+.sortable, .new_user {
+	& label {
+		display: inline-block;
+	}
+}
+
+label, .optionsContent label{
+	display: block;
+}
+
+/* select */
+select {
+	width: 20%;
+	background: image-url('forms/dropdown.png') no-repeat right center;
+	cursor: pointer;
+}
+
+/* textarea */
+textarea {
+	min-height: 300px;
+}
+
+/* uploaded image preview */
+.imagePreview {
+	width: 25%;
+}
+
+/* options panel */
+.optionsPanel, .optionsHide {
+	display: none;
+}
+
+.optionsVisible .optionsPanel {
+	display: block;
+}
+
+.optionsVisible .optionsHide {
+	display: inline;
+}
+
+.optionsVisible .optionsShow {
+	display: none;
+}
+
+.optionsPanel {
+	padding: $padding;
+	background-color: $lightGray;
+}
+
+/* drag and drop list */
+._dragHandle {
+	@include rotate(90deg);
+	display: inline-block;
+	cursor: move;
+}
+
+.sortable-placeholder {
+    margin: 20px 0;
+	padding-bottom: 20px;
+	border: 10px solid $white;
+    background-color: $lightGray;
+    text-align: center;
+    &:before {
+    	content: "DROP HERE";
+    }
+}
+
+.sortable-dragging:active {
+	border: none;
+	border: 2px solid $green;
+	background-color: $white;
+}
+
+/* progress bar */
+progress[value] {
+  	width: 250px;
+  	height: 20px;
+	-webkit-appearance: none;
+  	appearance: none;
+
+}
+
+progress[value]::-webkit-progress-bar {
+	border-radius: 2px;
+	background-color: #eee;
+}
+
+progress[value]::-webkit-progress-value {
+    background-image: -webkit-linear-gradient(-45deg, transparent 33%, rgba(255, 255, 255, .2) 33%, transparent 66%),
+-webkit-linear-gradient(left, #e45b5b, #e45b5b);
+    border-radius: 2px;
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+
+@-webkit-keyframes animate-stripes {
+	100% { background-position: -100px 0px; }
+}
+
+@keyframes animate-stripes {
+	100% { background-position: -100px 0px; }
+}
+
+progress[value]::-webkit-progress-value {
+    border-radius: 2px;
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+    position: relative;
+    -webkit-animation: animate-stripes 4s linear infinite;
+    animation: animate-stripes 4s linear infinite;
+}
+
+

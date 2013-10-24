@@ -1,0 +1,86 @@
+/* flexbox display */
+@mixin display($prop) {
+  @if $prop == flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+  } @else {
+    display: $prop;
+  }
+}
+
+/* flexbox direction */
+@mixin flex-direction($prop) {
+  @if $prop == row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+  }
+  @if $prop == column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+  }
+  @if $prop == row-reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: reverse;
+  }
+  @if $prop == column-reverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -moz-box-orient: vertical;
+    -moz-box-direction: reverse;
+  }
+  -ms-flex-direction: $prop;
+  -webkit-flex-direction: $prop;
+  flex-direction: $prop;
+}
+
+/* flexbox align items */
+@mixin align-items($prop) {
+  $oldprop: $prop;
+  @if $prop == flex-start { $oldprop: start; }
+  @if $prop == flex-end   { $oldprop: end; }
+  -webkit-box-align: $oldprop;
+  -moz-box-align: $oldprop;
+  -ms-flex-align: $oldprop;
+  -webkit-align-items: $prop;
+  align-items: $prop;
+}
+
+/* flexbox justify content */
+@mixin justify-content($prop) {
+  $oldprop: $prop;
+  @if $prop == flex-start    { $oldprop: start; }
+  @if $prop == flex-end      { $oldprop: end; }
+  @if $prop == space-between { $oldprop: justify; }
+  -webkit-box-pack: $oldprop;
+  -moz-box-pack: $oldprop;
+  -ms-flex-pack: $oldprop;
+  -webkit-justify-content: $prop;
+  justify-content: $prop;
+}
+
+/* flexbox justify content */
+@mixin flex($prop) {
+  -webkit-box-flex: $prop;
+  -moz-box-flex: $prop;
+  -ms-flex: $prop;
+  -webkit-flex: $prop;
+  flex: $prop;
+}
+
+/* flexbox order */
+@mixin order($prop) {
+  -webkit-box-ordinal-group: $prop + 1;
+  -moz-box-ordinal-group: $prop + 1;
+  -ms-flex-order: $prop;
+  -webkit-order: $prop;
+  order: $prop;
+}

@@ -1,0 +1,16 @@
+/* transition */
+@mixin transition($property, $duration, $function) {
+    -webkit-transition: $property $duration $function;
+       -moz-transition: $property $duration $function;
+         -o-transition: $property $duration $function;
+            transition: $property $duration $function;
+}
+
+/* translate */
+@mixin translate3d($x, $y, $z) {
+  -webkit-transform: translate3d($x, $y, $z);
+     -moz-transform: translate3d($x, $y, $z);
+       -o-transform: translate3d($x, $y, $z);
+          transform: translate3d($x, $y, $z);
+}
+

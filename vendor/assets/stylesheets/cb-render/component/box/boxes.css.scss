@@ -1,0 +1,78 @@
+/*
+CSS GUIDE
+	box
+		hd = header;
+		bd = body;
+			md = media;
+			ct =content;
+		ft = footer;
+*/
+
+/* vars */
+@import "cb-render/globals/all.css.scss";
+
+/* box module */
+.box {
+	background: $white;
+	padding: $padding;
+	& h2 {
+		margin: 0; padding: 0;
+	}
+
+}
+
+/* box sub-modules */
+.box-hd {
+	padding-bottom: $padding;
+}
+
+.box-bd {
+	& .box--md {
+		float: left;
+		margin-right: $padding;
+	}
+	& .box--ct {
+		display: table-cell;
+	}
+	&:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+	& figure {
+		margin-bottom: 0;
+	}
+}
+
+.content .box-bd {
+	padding: $padding;
+}
+
+.box-ft {
+	text-align: center;
+	padding-top: $padding;
+}
+
+/* box module extend */
+/* content module  */
+.content {
+	& .box-bd {
+		border: 1px solid $lightGray;
+	}
+	& .box--md {
+		width: 80px;
+		height: 80px;
+		overflow: hidden;
+		& img {
+			max-width: 80px;
+		}
+	}
+}
+
+.modal {
+	& .box { 
+		background: $darkGray;
+		color: $white;
+	} 
+}
+

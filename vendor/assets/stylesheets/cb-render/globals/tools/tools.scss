@@ -1,0 +1,24 @@
+/* ================== rotate ================== */
+@mixin rotate($degrees) {
+	-moz-transform: rotate($degrees); 
+	-o-transform: rotate($degrees); 
+	-webkit-transform: rotate($degrees);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)})";
+	zoom: 1;
+}
+ 
+/* ================== rounded borders ================== */
+@mixin roundedBorders($rounding: 4px) {
+	-moz-border-radius: $rounding $rounding;
+	-webkit-border-radius: $rounding $rounding;
+	-khtml-border-radius: $rounding $rounding;
+	-o-border-radius: $rounding $rounding;
+	border-radius: $rounding $rounding;
+}
+
+/* ================== shadow ================== */
+@mixin shadow( $off-y, $off-x, $blur, $color){
+	  -moz-box-shadow: $off-y $off-x $blur $color; 
+  -webkit-box-shadow:  $off-y $off-x $blur $color; 
+          box-shadow:  $off-y $off-x $blur $color;
+}

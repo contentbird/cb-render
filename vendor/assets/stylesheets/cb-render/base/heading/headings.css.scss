@@ -1,0 +1,17 @@
+@import "cb-render/globals/all.css.scss";
+
+h1, .h1 {
+    font-size: $largeSizeText;
+    font-family: $titleFont;
+    font-weight: 100;
+}
+
+h2, .h2 {
+	@extend h1;
+	font-size: $mediumSizeText;
+}
+
+h3, .h3 {
+	@extend h1;
+	font-size: $smallSizeText;
+}

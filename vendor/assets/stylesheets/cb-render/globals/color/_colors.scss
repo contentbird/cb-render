@@ -1,0 +1,31 @@
+/* variables color */
+$white:			#ffffff;
+
+$darkGray:  	#333333;
+$gray:          lighten($darkGray, 34%);
+$lightGray: 	lighten($darkGray, 74%);
+
+$red: 			#f86363;
+$blue: 			#1122cc;
+
+$green:  		#14cc47;
+$lightGreen: 	#bfe6ca;
+
+$yellow: 		#fefddc;
+
+/* background color */
+$noticeColor: 	$green;
+$alertColor: 	$red;
+
+/* text color */
+$txtColor: 		$darkGray;
+
+/* link color */
+$linkColor: 	$blue;
+$linkHoverColor:$darkGray;
+
+/* form color */
+$selectColor: 	$lightGray;
+
+/* focus form color */
+$focusColor: 	$yellow;

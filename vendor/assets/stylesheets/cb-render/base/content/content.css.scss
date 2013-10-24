@@ -1,0 +1,142 @@
+/*
+CSS GUIDE
+[
+	[
+		"position",
+		…
+	],
+	[
+		"margin",
+		"padding",
+		"border",
+		…
+	],
+	…
+
+	
+]*/
+
+
+@import "cb-render/globals/all.css.scss";
+
+* {
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;  
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+    font-size: $smallSizeText;
+	font-family: $contentFont;
+	/* default root font-size */
+	font-size: 100%;
+}
+
+body {
+  	margin: 0;
+  	padding: 0;
+	height: 100%;
+	color: $txtColor;
+}
+
+.main, .page {
+	min-height: 100%;
+}
+
+/* links */
+a {
+	color: $linkColor;
+	text-decoration: none;
+	&:hover {
+		color: $linkHoverColor;
+	}
+}
+
+/* list */
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+/* page */
+.page {
+	width: 100%;
+	background-color: $white;
+}
+
+label {
+	color: $gray;
+}
+
+/* paragraphe */
+p {
+	line-height: 1.125rem;
+}
+
+/* spac */
+h1,h2,h3,h4,h5,h6,hgroup,ul,ol,dd,p,figure,pre,table,fieldset,hr, a.butn, .box, .notice, .error, .optionsContent, ._imageWidget,  .cell  {
+    margin-bottom:1.125rem;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	margin-top: 1.125rem;
+}
+
+h1 {
+	text-align: center;
+	line-height: 1.125rem*2;
+}
+
+h3 {
+	line-height: 1.125rem
+}
+
+h2, h3, h4, h5, h6 {
+	text-align: left;
+}  
+
+
+/* alert message */
+.alert, .error {
+	padding: $padding;
+	background-color: $alertColor;
+	color: $white;
+	text-align: center;
+}
+
+.notice {
+	@extend .alert;
+	background-color: $noticeColor; 
+}
+
+/* Text Size */
+.mTxt {
+	font-size: $mediumSizeText;
+}
+
+.lTxt {
+	font-size: $largeSizeText;
+}
+
+.center {
+	margin: 0 auto;
+}
+
+.cTxt {
+	text-align: center;
+}
+
+.lFloat {
+	float: left;
+}
+
+.rFloat {
+	float: right;
+}
+
+.actions {
+	text-align: center;
+}
+

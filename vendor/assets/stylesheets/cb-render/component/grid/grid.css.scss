@@ -1,0 +1,68 @@
+/* flex container */
+.dGrid li ul, .dGrid div, .page {
+	@include display(flex);
+	@include flex-direction(row);
+}
+
+/* dGrid row by default */ 
+.dGrid {
+	background: $white;
+}
+
+ul.dGrid {
+	& > li {
+		border-top: 1px solid $lightGray;
+		&:last-child {
+			border-bottom: 1px solid $lightGray;
+		}
+		& ul {	
+			width: 100%;	
+			padding: $padding 0 0 0;
+			& li{				
+				padding: 0 $padding/2 0 0;
+				/* size items */
+				&:first-child {
+					@include flex(1);
+				}
+				&:last-child {
+					text-align: right;
+					padding-right: inherit;
+				}
+			}
+
+		}
+	}
+	& div {
+		padding: 0 0 $padding/2 0;
+	}
+}
+
+/* Grid row */ 
+.row, .cell-content {
+	@include display(flex);
+
+}
+
+/* Cell ratio */ 
+.ratio1, .cell-fill  {
+	@include flex(1);
+}
+
+.ratio1 {
+	@include flex(2);
+}
+
+.cell-fill input, .cell-fill select {
+	width: 100%;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-width : 320px)
+and (max-width : 480px){
+	.row {
+		@include display(flex);
+		@include flex-direction(column);
+	}
+}
+
