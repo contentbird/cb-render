@@ -1,29 +1,40 @@
 .butn {
+    display: inline-block;
     padding: $padding/2;
     border: none;
     background-color: $gray;
     color: $white;
-    display: inline-block;
     &.action{
         background-color: $blue;
     }
-    &.togl-on{
-        background-color: $green;
-        border: 2px solid $green;
-    }
     &.togl-off {
-        background-color: $white;
         border: 2px solid $lightGray;
+        background-color: $white;
         color: $gray;
         &:hover {
-            border: 2px solid $green;
+            border-color: $green;
             color: $gray;
         }
     }
     &.togl-work{
-        // spinning loader
-        border: 2px solid $white;
+        @extend .togl-off;
+        border-color: $green; 
+        color: $green;
+        &:hover {
+            @extend .togl-work;
+            opacity: 1;   
+        }
+        &:before {
+            @include rotation (rotation, 2s, infinite, linear);
+            display: inline-block;
+            content: "\e602";
+        }
     }
+    &.togl-on{
+        border: 2px solid $green;
+        background-color: $green;
+    }
+
     &._addFields, &._addFields:hover  {
         display: block;
         border: 2px dashed $darkGray;
@@ -45,25 +56,25 @@ header .butn {
 }
 
 .butnMenu {
-    background: $darkGray;
     position: absolute;
+    position: absolute;
+    right: $padding;
+    left: $padding;
     z-index: 1000;
     margin: auto;
-    position: absolute;
-    left: $padding;
-    right: $padding;
     padding: $padding;
+    background: $darkGray;
     color: $white;
     & a {
         color: white;
     }
     &:after {
-        content: '';
+        @include arrow(top, $darkGray, 20px);
         position: absolute;
-        margin: auto;
-        left: 0;
-        right: 0;
         top: -20px;
-        @include arrow(top, $darkGray, 20px)
+        right: 0;
+        left: 0;
+        margin: auto;
+        content: '';
     }
 }
