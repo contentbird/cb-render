@@ -52,8 +52,11 @@ ul.dGrid {
 	@include flex(2);
 }
 
-.cell-fill input, .cell-fill select {
-	width: 100%;
+/* Cell padding */ 
+.cell label, 
+.cell ._dragHandle, 
+.cell ._removeFields {
+	margin: $padding/2;
 }
 
 /* Smartphones (portrait and landscape) ----------- */

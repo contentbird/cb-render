@@ -89,6 +89,12 @@ input[type="text"]:focus.formTitle {
 	background: $focusColor;
 }
 
+/*  */
+.cell-fill input, .cell-fill select {
+	width: 100%;
+	margin-bottom: 0;
+}
+
 /* input type file */
 .fileUpload {
 	position: relative;
@@ -109,19 +115,19 @@ input[type="text"]:focus.formTitle {
 	}
 }
 
-/* fieldset */
 fieldset {
-	margin: 0;
-	padding: $padding 0 0 0;
 	border: none;
+	padding: 0;
 }
 
-.sortable > fieldset:first-of-type {
-	border-top: 1px solid $lightGray;
-}
-
-.sortable > fieldset {
+.sortable {
+	> fieldset:first-of-type {
+		border-top: 1px solid $lightGray;
+		padding-top: $padding;
+	}
+	& > fieldset {
 	border-bottom: 1px solid $lightGray;
+	}
 }
 
 /* label */
