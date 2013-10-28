@@ -23,8 +23,8 @@ input[type="email"], input[type="password"], input[type="text"], input[type="fil
 }
 
 input[type="search"]{
-	width: 100%;
 	padding: $padding;
+	width: 100%;
 	border: none;
 	border-radius: none;
 	-webkit-appearance: none;
@@ -45,6 +45,7 @@ input[type="email"]:hover, input[type="password"]:hover, input[type="text"]:hove
 
 input[type="submit"] {
 	padding: 10px $padding;
+	margin: 0 0 $padding 0;
 	border: none;
 	background-color: $blue;
 	color: $white;
@@ -81,8 +82,8 @@ input:-webkit-autofill:focus {
 
 input[type="text"].formTitle {
 	border: none;
-	font-size: $mediumSizeText;
 	text-align: center;
+	font-size: $mediumSizeText;
 }
 
 input[type="text"]:focus.formTitle {
@@ -91,8 +92,8 @@ input[type="text"]:focus.formTitle {
 
 /*  */
 .cell-fill input, .cell-fill select {
-	width: 100%;
 	margin-bottom: 0;
+	width: 100%;
 }
 
 /* input type file */
@@ -110,25 +111,24 @@ input[type="text"]:focus.formTitle {
 		position: absolute;
 		right: 0;
     	bottom: 0;
-		font-size: 200px !important;
-		height: 200px;
-		opacity: 0;
-		cursor: inherit;
 		margin: 0;
 		padding: 0;
-		bottom: 0;
+		height: 200px;
+		font-size: 200px !important;
+		opacity: 0;
+		cursor: inherit;
 	}
 }
 
 fieldset {
-	border: none;
 	padding: 0;
+	border: none;
 }
 
 .sortable {
 	> fieldset:first-of-type {
-		border-top: 1px solid $lightGray;
 		padding-top: $padding;
+		border-top: 1px solid $lightGray;
 	}
 	& > fieldset {
 	border-bottom: 1px solid $lightGray;
@@ -224,9 +224,9 @@ progress[value]::-webkit-progress-bar {
 }
 
 progress[value]::-webkit-progress-value {
+    border-radius: 2px;
     background-image: -webkit-linear-gradient(-45deg, transparent 33%, rgba(255, 255, 255, .2) 33%, transparent 66%),
 -webkit-linear-gradient(left, #e45b5b, #e45b5b);
-    border-radius: 2px;
     background-size: 35px 20px, 100% 100%, 100% 100%;
 }
 
@@ -239,9 +239,9 @@ progress[value]::-webkit-progress-value {
 }
 
 progress[value]::-webkit-progress-value {
+    position: relative;
     border-radius: 2px;
     background-size: 35px 20px, 100% 100%, 100% 100%;
-    position: relative;
     -webkit-animation: animate-stripes 4s linear infinite;
     animation: animate-stripes 4s linear infinite;
 }
