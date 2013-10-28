@@ -54,27 +54,3 @@ header .butn {
     float: right;
     margin-top: 0;
 }
-
-.butnMenu {
-    position: absolute;
-    position: absolute;
-    right: $padding;
-    left: $padding;
-    z-index: 1000;
-    margin: auto;
-    padding: $padding;
-    background: $darkGray;
-    color: $white;
-    & a {
-        color: white;
-    }
-    &:after {
-        @include arrow(top, $darkGray, 20px);
-        position: absolute;
-        top: -20px;
-        right: 0;
-        left: 0;
-        margin: auto;
-        content: '';
-    }
-}

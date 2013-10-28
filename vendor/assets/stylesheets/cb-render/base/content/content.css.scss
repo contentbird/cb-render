@@ -138,3 +138,35 @@ h2, h3, h4, h5, h6 {
 	text-align: center;
 }
 
+
+.butnMenu {
+    position: absolute;
+    position: absolute;
+    right: $padding;
+    left: $padding;
+    z-index: 1000;
+    margin: auto;
+    padding: $padding;
+    background: $darkGray;
+    color: $white;
+    & a {
+        color: white;
+    }
+    &:after {
+        @include arrow(top, $darkGray, 20px);
+        position: absolute;
+        top: -20px;
+        right: 0;
+        left: 0;
+        margin: auto;
+        content: '';
+    }
+    & ul, & h2 {
+        @include display(flex);
+        @include justify-content(center);
+        & li {
+        	margin-right: $padding;
+        }
+    }
+}
+
