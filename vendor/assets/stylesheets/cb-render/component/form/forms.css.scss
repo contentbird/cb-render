@@ -105,13 +105,18 @@ input[type="text"]:focus.formTitle {
 	position: absolute;
 	left: 0;
 	overflow: hidden;
+	cursor: pointer;
 	& input {
 		position: absolute;
 		right: 0;
     	bottom: 0;
-		font-size: 130px !important;
+		font-size: 200px !important;
+		height: 200px;
 		opacity: 0;
-		cursor: pointer;
+		cursor: inherit;
+		margin: 0;
+		padding: 0;
+		bottom: 0;
 	}
 }
 
