@@ -38,9 +38,29 @@ ul.dGrid {
 }
 
 /* Grid row */ 
+.grid {
+	& > .row {
+		border-bottom: 1px solid $lightGray;
+			&.with-sub-row {
+				border: none;
+			}
+	}
+	& .sub-row {
+		border-bottom: 1px solid $lightGray;
+	}
+}
+
+/* row & cell */ 
+.row, .cell-content {
+ 	@include display(flex);
+}
+
+.row {
+	padding: $padding;
+}
+ 
 .row, .cell-content {
 	@include display(flex);
-
 }
 
 /* Cell ratio */ 
