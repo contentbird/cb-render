@@ -37,30 +37,19 @@ ul.dGrid {
 	}
 }
 
-/* Grid row */ 
-.grid {
-	& > .row {
-		border-bottom: 1px solid $lightGray;
-			&.with-sub-row {
-				border: none;
-			}
-	}
-	& .sub-row {
-		border-bottom: 1px solid $lightGray;
-	}
-}
 
 /* row & cell */ 
 .row, .cell-content {
  	@include display(flex);
 }
-
-.row {
-	padding: $padding;
-}
  
 .row, .cell-content {
 	@include display(flex);
+}
+
+.cell {
+	margin-top: $padding;
+	margin-bottom: $padding; 
 }
 
 /* Cell ratio */ 
@@ -81,6 +70,25 @@ ul.dGrid {
 .cell ._dragHandle, 
 .cell ._removeFields {
 	margin: $padding/2;
+}
+
+/* Grid rows & cells */ 
+.grid {
+	& > .row {
+		&:first-child {
+			border-top: 1px solid $lightGray;
+		}
+		border-bottom: 1px solid $lightGray;
+			&.with-sub-row {
+				border-bottom: none;
+			}
+	}
+	& .sub-row {
+		border-bottom: 1px solid $lightGray;
+		& .cell {
+			margin: 0;
+		}
+	}
 }
 
 /* Smartphones (portrait and landscape) ----------- */

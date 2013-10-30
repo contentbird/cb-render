@@ -41,6 +41,14 @@ nav [data-icon]:before {
     font-size: $mediumSizeText;
 }
 
+.switch-view {
+    font-size: $mediumSizeText;
+    opacity: 0.3;
+    &.active {
+        opacity: 1;
+    }
+}
+
 .collapseMenu[data-icon]:before {
     font-size: $smallSizeText;
     position: fixed;
