@@ -90,6 +90,11 @@ input[type="text"]:focus.formTitle {
 	background: $focusColor;
 }
 
+input[type="text"].inputError.formTitle {
+	background: $white;
+	border: 2px solid $red;
+}
+
 /*  */
 .cell-fill input, .cell-fill select {
 	margin-bottom: 0;
@@ -244,9 +249,4 @@ progress[value]::-webkit-progress-value {
     background-size: 35px 20px, 100% 100%, 100% 100%;
     -webkit-animation: animate-stripes 4s linear infinite;
     animation: animate-stripes 4s linear infinite;
-}
-
-/* dummy change */
-.dummy-change {
-	background-color: black;
 }
