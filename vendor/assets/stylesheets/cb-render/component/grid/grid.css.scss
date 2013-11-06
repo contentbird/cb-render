@@ -1,42 +1,8 @@
 /* flex container */
-.dGrid li ul, .dGrid div, .page {
+.page {
 	@include display(flex);
 	@include flex-direction(row);
 }
-
-/* dGrid row by default */ 
-.dGrid {
-	background: $white;
-}
-
-ul.dGrid {
-	& > li {
-		border-top: 1px solid $lightGray;
-		&:last-child {
-			border-bottom: 1px solid $lightGray;
-		}
-		& ul {	
-			width: 100%;	
-			padding: $padding 0 0 0;
-			& li{				
-				padding: 0 $padding/2 0 0;
-				/* size items */
-				&:first-child {
-					@include flex(1);
-				}
-				&:last-child {
-					text-align: right;
-					padding-right: inherit;
-				}
-			}
-
-		}
-	}
-	& div {
-		padding: 0 0 $padding/2 0;
-	}
-}
-
 
 /* row & cell */ 
 .row, .cell-content {

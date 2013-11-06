@@ -73,7 +73,7 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
 }
 
 input:-webkit-autofill {
-	-webkit-box-shadow:0 0 0 50px $blue inset;
+	-webkit-box-shadow:0 0 0 50px $white inset;
 }
 
 input:-webkit-autofill:focus {
@@ -95,10 +95,15 @@ input[type="text"].inputError.formTitle {
 	border: 2px solid $red;
 }
 
-/*  */
+/* cell */
 .cell-fill input, .cell-fill select {
 	margin-bottom: 0;
 	width: 100%;
+}
+
+
+.cell .butn {
+	margin-left: $padding/2;
 }
 
 /* input type file */
@@ -178,7 +183,7 @@ textarea {
 }
 
 .optionsVisible .optionsHide {
-	display: inline;
+	display: inline-block;
 }
 
 .optionsVisible .optionsShow {
@@ -220,7 +225,6 @@ progress[value] {
   	height: 20px;
 	-webkit-appearance: none;
   	appearance: none;
-
 }
 
 progress[value]::-webkit-progress-bar {

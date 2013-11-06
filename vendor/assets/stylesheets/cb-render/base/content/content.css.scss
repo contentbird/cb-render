@@ -60,7 +60,7 @@ ul {
 /* page */
 .page {
 	width: 100%;
-	background-color: $white;
+	background-color: $gray;
 }
 
 label {
@@ -172,4 +172,9 @@ h2, h3, h4, h5, h6 {
 .hide_pub {
 	margin-bottom: $padding;
 	display: block;
+}
+
+.copyright {
+	position: fixed;
+	bottom: 1.125rem;
 }
