@@ -22,3 +22,16 @@
   -webkit-box-shadow:  $off-y $off-x $blur $color; 
           box-shadow:  $off-y $off-x $blur $color;
 }
+
+/* ================== mobilefirst breakpoints ================== */
+$medium: 40.063em;
+$large: 64em;
+
+@mixin bp($point) {
+    @if $point == medium {
+        @media only screen and (min-width: $medium)  { @content; }
+    }
+    @else if $point == large {
+        @media only screen and (min-width: $large) { @content; }
+    }
+}
