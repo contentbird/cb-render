@@ -16,6 +16,7 @@
 .cell {
 	margin-top: $padding;
 	margin-bottom: $padding; 
+	word-wrap:break-word;
 }
 
 /* Cell ratio */ 
@@ -38,6 +39,26 @@
 	margin: $padding/2;
 }
 
+/* Cell border */ 
+.cell-bt {
+	border-top : 1px solid $lightGray;
+}
+.cell-br {
+	border-right : 1px solid $lightGray;
+}
+.cell-bb {
+	border-bottom : 1px solid $lightGray;
+}
+.cell-bl {
+	border-left : 1px solid $lightGray;
+}
+.cell-b {
+	@extend .cell-bt;
+	@extend .cell-br;
+	@extend .cell-bb;
+	@extend .cell-bl;
+}
+
 /* Grid rows & cells */ 
 .grid {
 	& > .row {
@@ -54,6 +75,16 @@
 		& .cell {
 			margin: 0;
 		}
+	}
+}
+
+.grid-no-border {
+	@extend .grid;
+	& > .row {
+		&:first-child {
+			border: none;
+		}
+		border: none;
 	}
 }
 

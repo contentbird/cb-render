@@ -57,9 +57,16 @@ nav [data-icon]:before {
 
 .widthMenu .collapseMenu[data-icon]:before {
     content: "\e018";
-
 }
 
 .remove, ._removeFields {
     color: $darkGray;
+}
+
+.check { 
+    color: $green;
+    cursor: pointer;
+    &[data-icon]:before {
+        font-size: $mediumSizeText; 
+    }
 }
