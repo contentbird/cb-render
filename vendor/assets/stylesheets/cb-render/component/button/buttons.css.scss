@@ -34,7 +34,18 @@
         border: 2px solid $green;
         background-color: $green;
     }
-
+    &.combo-l {
+        &.togl-on {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    }
+    &.combo-r._seePublication {
+        @extend .togl-on;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        margin-left: -4px;
+    }
     &._addFields, &._addFields:hover  {
         display: block;
         border: 2px dashed $darkGray;
@@ -48,6 +59,12 @@
         color: $white;
         opacity: 0.7;
     }
+}
+
+/* button with picto only */
+.butn-no-text {
+    @extend .butn;
+    padding-right: 0;
 }
 
 header .butn {
