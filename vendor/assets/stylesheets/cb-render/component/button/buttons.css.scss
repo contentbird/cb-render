@@ -34,17 +34,21 @@
         border: 2px solid $green;
         background-color: $green;
     }
+    &.combo-l, &.combo-r {
+        float: left;   
+    }
     &.combo-l {
         &.togl-on {
             border-top-right-radius: 0;
             border-bottom-right-radius: 0;
         }
+        
     }
     &.combo-r._seePublication {
         @extend .togl-on;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
-        margin-left: -4px;
+        margin-left: 1px;
     }
     &._addFields, &._addFields:hover  {
         display: block;
