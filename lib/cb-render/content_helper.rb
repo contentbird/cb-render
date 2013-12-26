@@ -17,6 +17,20 @@ module ContentHelper
     end
   end
 
+  def display_image_gallery_property name, data, options={}
+    options  = default_options.merge(options)
+    html_gallery = []
+    if data['value'].present?
+      data['value'].map{|i| i['value'] = i['url'] ; i['title'] = i['legend']}
+      data['value'].each do |image|
+        html_gallery << display_image_property(name, image)
+      end
+      content_tag :div, class: "cb-type-img_gal cb-prop-#{name}" do
+        raw html_gallery.join
+      end
+    end
+  end
+
   def display_text_property name, data, options={}
     options  = default_options.merge(options)
     content_tag :p, class: "cb-type-text cb-prop-#{name} #{options[:wrapper_class]}" do
