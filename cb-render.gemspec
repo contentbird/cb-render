@@ -14,6 +14,9 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency     'sass-rails',  '= 4.0'
   s.add_runtime_dependency     'pygments.rb', '~> 0.5'
   s.add_runtime_dependency     'redcarpet',   '~> 3.0'
+  s.add_runtime_dependency     'actionpack'
+
+  s.add_development_dependency 'rspec'
 
   s.files      = `git ls-files`.split("\n")
   s.test_files = `git ls-files -- test/*`.split("\n")
