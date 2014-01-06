@@ -56,6 +56,15 @@ describe ContentHelper do
 
       rendered.should eq '<div class="cb-type-img_gal cb-prop-image_gallery_prop"><figure class="cb-type-image cb-prop-image_gallery_prop "><img alt="image test" src="http://img.us/test.jpg" /></figure><figure class="cb-type-image cb-prop-image_gallery_prop "><img alt="image test 2" src="http://img.us/test2.jpg" /></figure></div>'
     end
+
+    it 'renders the first image using the legend as a title if summary option is passed' do
+      rendered = display_content_property('image_gallery_prop',
+                                          {'title' => 'Image property',
+                                           'value' => [{'url' => 'http://img.us/test.jpg', 'legend' => 'image test'},
+                                                       {'url' => 'http://img.us/test2.jpg', 'legend' => 'image test 2'}],
+                                           'type' => 'image_gallery'}, summary: true)
+      rendered.should eq '<figure class="cb-type-image cb-prop-image_gallery_prop "><img alt="image test" src="http://img.us/test.jpg" /></figure>'
+    end
   end
 
 end
