@@ -1,0 +1,24 @@
+{
+  "name": "cb-render",
+  "version": "0.2.0",
+  "homepage": "https://github.com/contentbird/cb-render",
+  "authors": [
+    "nna <nico.nardone@gmail.com>",
+    "Sebastien NEUSCH <sneusch@gmail.com>",
+    "Adrien Thery <adrien.thery@gmail.com>"
+  ],
+  "main": "cb-render.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/assets/javascripts/cb-render",
+    "spec",
+    "lib"
+  ],
+  "dependencies": {
+    "rainbow": "=1.1.9"
+  }
+}
