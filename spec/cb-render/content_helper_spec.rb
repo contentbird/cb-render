@@ -27,6 +27,11 @@ describe ContentHelper do
       rendered.should eq '<p class="cb-type-text cb-prop-text_prop ">Text property: this is text</p>'
     end
 
+    it 'renders email properties as a mail_to link' do
+      rendered = display_content_property('email_prop', {'title' => 'Email property', 'value' => 'test@test.com', 'type' => 'email'})
+      rendered.should eq '<p class="cb-type-email cb-prop-email_prop ">Email property: <a href="mailto:test@test.com">test@test.com</a></p>'
+    end
+
     it 'renders memo properties using simpleformat' do
       rendered = display_content_property('text_prop', {'title' => 'Memo property', 'value' => "this is\n multiline\ntext", 'type' => 'memo'})
       rendered.should eq "<p class=\"cb-type-memo cb-prop-text_prop\">Memo property: <p>this is\n<br /> multiline\n<br />text</p></p>"
