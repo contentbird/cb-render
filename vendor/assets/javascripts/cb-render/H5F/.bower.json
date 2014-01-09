@@ -1,0 +1,15 @@
+{
+  "name": "H5F",
+  "version": "1.0.1",
+  "main": "h5f.js",
+  "homepage": "https://github.com/ryanseddon/H5F",
+  "_release": "1.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.1",
+    "commit": "3363888583c50e9b3c3f39fcb00fad19f6fa4614"
+  },
+  "_source": "git://github.com/ryanseddon/H5F.git",
+  "_target": "*",
+  "_originalSource": "H5F"
+}
