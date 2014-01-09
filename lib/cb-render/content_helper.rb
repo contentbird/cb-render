@@ -24,12 +24,15 @@ module ContentHelper
       options  = default_options.merge(options)
       html_gallery = []
       if data['value'].present?
-        data['value'].map{|i| i['value'] = i['url'] ; i['title'] = i['legend']}
         data['value'].each do |image|
-          html_gallery << display_image_property(name, image)
+          image_html = "<figure><div class=\"bg4\" style=\"background-image: url(#{image['url']}); padding-bottom: 30px\"></div>"
+          image_html += "<figcaption>#{image['legend']}</figcaption></figure>" if image['legend'].present?
+          html_gallery << "<li>#{image_html}</li>"
         end
-        content_tag :div, class: "cb-type-img_gal cb-prop-#{name}" do
-          raw html_gallery.join
+        content_tag :div, class: "row4 cb-type-img_gal cb-prop-#{name}" do
+          content_tag :ul do
+            raw html_gallery.join
+          end
         end
       end
     end
