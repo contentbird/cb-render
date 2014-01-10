@@ -14,6 +14,19 @@
     background-repeat: no-repeat;
 }
 
+.image-del {
+    position: absolute;
+    top: $padding/2;
+    right: $padding/2;
+    padding: $padding/2;
+    color: $gray;
+    background-color: $white;
+    border: 1px solid $lightGray;
+    &[data-icon]:before {
+        margin-right: 0;
+    }
+}
+
 figcaption {
     position: absolute;
     bottom: 0;
@@ -21,6 +34,6 @@ figcaption {
     width: 100%;
     border: 1px solid $lightGray;
     border-top: none;
-    background: white;
+    background: $white;
 }
 
