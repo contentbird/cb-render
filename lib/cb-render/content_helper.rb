@@ -76,6 +76,17 @@ module ContentHelper
     end
   end
 
+  def display_tel_property name, data, options={}
+    options  = default_options.merge(options)
+    content_tag :p, class: "cb-type-tel cb-prop-#{name}" do
+      if options[:display_label]
+        "#{data['title']}: #{data['value']}"
+      else
+        data['value']
+      end
+    end
+  end
+
   def display_markdown_property name, data, options={}
     content_tag :div, class: "cb-type-markdown cb-prop-#{name}" do
       markdown data['value'], options
