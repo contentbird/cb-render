@@ -59,7 +59,7 @@ describe ContentHelper do
                                                        {'url' => 'http://img.us/test2.jpg', 'legend' => 'image test 2'}],
                                            'type' => 'image_gallery'})
 
-      rendered.should eq '<div class="cb-type-img_gal cb-prop-image_gallery_prop"><figure class="cb-type-image cb-prop-image_gallery_prop "><img alt="image test" src="http://img.us/test.jpg" /></figure><figure class="cb-type-image cb-prop-image_gallery_prop "><img alt="image test 2" src="http://img.us/test2.jpg" /></figure></div>'
+      rendered.should eq '<div class="row cb-type-img_gal cb-prop-image_gallery_prop"><ul><li class="image-container"><figure><div class="image-content" style="background-image: url(http://img.us/test.jpg); padding-bottom: 30px"></div><figcaption>image test</figcaption></figure></li><li class="image-container"><figure><div class="image-content" style="background-image: url(http://img.us/test2.jpg); padding-bottom: 30px"></div><figcaption>image test 2</figcaption></figure></li></ul></div>'
     end
 
     it 'renders the first image using the legend as a title if summary option is passed' do
