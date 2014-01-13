@@ -1,10 +1,21 @@
-input[type="email"], input[type="password"], input[type="text"], input[type="search"] {
+input[type="tel"],
+input[type="url"],
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="search"] {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
-input[type="email"], input[type="password"], input[type="text"], input[type="file"], textarea, select  {
+input[type="tel"],
+input[type="url"],
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="file"],
+textarea, select  {
 	margin: 0 0 $padding 0;
 	padding: $padding/2;
 	width: 100%;
@@ -39,7 +50,13 @@ select {
 	border: 2px solid $lightGray;
 }
 
-input[type="email"]:hover, input[type="password"]:hover, input[type="text"]:hover, textarea:hover, select:hover {
+input[type="tel"]:hover,
+input[type="url"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover,
+input[type="text"]:hover,
+textarea:hover,
+select:hover {
 	border: 2px solid $lightGreen;
 }
 
@@ -51,12 +68,18 @@ input[type="submit"] {
 	color: $white;
 }
 
-input[type="submit"].signIn, input[type="submit"].signUp {
+input[type="submit"].signIn,
+input[type="submit"].signUp {
 	background-color: $green;
 
 }
 
-input[type="email"].inputError , input[type="password"].inputError , input[type="text"].inputError, .inputError._typeSelect {
+input[type="tel"].inputError,
+input[type="url"].inputError,
+input[type="email"].inputError,
+input[type="password"].inputError,
+input[type="text"].inputError, 
+.inputError._typeSelect {
 	border: 2px solid $red;
 }
 
@@ -64,7 +87,13 @@ input[type="submit"]:hover {
 	opacity: 0.7;
 }
 
-input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focus, textarea:focus, select:focus {
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus, 
+input[type="text"]:focus,
+textarea:focus, 
+select:focus {
 	outline: 0;
 	border-color: $green;
 	-webkit-box-shadow: none;
