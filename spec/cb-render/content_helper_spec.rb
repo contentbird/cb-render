@@ -37,6 +37,11 @@ describe ContentHelper do
       rendered.should eq '<p class="cb-type-tel cb-prop-tel_prop">Tel property: 01 09 09 87 36</p>'
     end
 
+    it 'renders url properties as link' do
+      rendered = display_content_property('url_prop', {'title' => 'Url property', 'value' => 'http://contenbird.com', 'type' => 'url'})
+      rendered.should eq '<p class="cb-type-url cb-prop-url_prop">Url property: <a href="http://contenbird.com">http://contenbird.com</a></p>'
+    end
+
     it 'renders memo properties using simpleformat' do
       rendered = display_content_property('text_prop', {'title' => 'Memo property', 'value' => "this is\n multiline\ntext", 'type' => 'memo'})
       rendered.should eq "<p class=\"cb-type-memo cb-prop-text_prop\">Memo property: <p>this is\n<br /> multiline\n<br />text</p></p>"

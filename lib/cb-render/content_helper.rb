@@ -87,6 +87,17 @@ module ContentHelper
     end
   end
 
+  def display_url_property name, data, options={}
+    options  = default_options.merge(options)
+    content_tag :p, class: "cb-type-url cb-prop-#{name}" do
+      if options[:display_label]
+        raw("#{data['title']}: <a href=\"#{data['value']}\">#{data['value']}</a>")
+      else
+        data['value']
+      end
+    end
+  end
+
   def display_markdown_property name, data, options={}
     content_tag :div, class: "cb-type-markdown cb-prop-#{name}" do
       markdown data['value'], options
