@@ -283,3 +283,8 @@ progress[value]::-webkit-progress-value {
     -webkit-animation: animate-stripes 4s linear infinite;
     animation: animate-stripes 4s linear infinite;
 }
+
+/* mardown */
+.mdEditor {
+	border: 2px solid $lightGray;
+}
