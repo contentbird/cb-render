@@ -136,7 +136,7 @@ h2, h3, h4, h5, h6 {
 }
 
 /* all roundedBorders */
-.butn, input[type="submit"], .image-del  {
+.butn, input[type="submit"], .image-del, .image-add {
 	@include roundedBorders;
 }
 
