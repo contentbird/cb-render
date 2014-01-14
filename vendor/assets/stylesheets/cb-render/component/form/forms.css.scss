@@ -79,8 +79,15 @@ input[type="tel"].inputError,
 input[type="url"].inputError,
 input[type="email"].inputError,
 input[type="password"].inputError,
-input[type="text"].inputError, 
-.inputError._typeSelect {
+.inputError._typeSelect,
+input[type="text"].inputError,
+input[type="tel"].h5fError,
+input[type="url"].h5fError,
+input[type="email"].h5fError,
+input[type="password"].h5fError,
+input[type="text"].h5fError,
+.h5fError._typeSelect,
+ {
 	border: 2px solid $red;
 }
 
@@ -120,7 +127,8 @@ input[type="text"]:focus.formTitle {
 	background: $focusColor;
 }
 
-input[type="text"].inputError.formTitle {
+input[type="text"].inputError.formTitle,
+input[type="text"].h5fError.formTitle {
 	background: $white;
 	border: 2px solid $red;
 }
