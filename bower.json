@@ -20,6 +20,7 @@
   ],
   "dependencies": {
     "rainbow": "=1.1.9",
-    "H5F": ""
+    "H5F": "",
+    "blueimp-tmpl": ""
   }
 }
