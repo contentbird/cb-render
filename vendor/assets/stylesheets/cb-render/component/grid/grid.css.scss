@@ -66,9 +66,12 @@
 			border-top: 1px solid $lightGray;
 		}
 		border-bottom: 1px solid $lightGray;
-			&.with-sub-row {
-				border-bottom: none;
-			}
+		&.with-sub-row {
+			border-bottom: none;
+		}
+		& .butn {
+			margin-bottom: 0;
+		}
 	}
 	& .sub-row {
 		border-bottom: 1px solid $lightGray;
@@ -101,8 +104,6 @@ and (max-width : 480px){
 		@include display(flex);
 		@include flex-direction(column);
 	}
-	
-
 
 	.sortable .row {
 		border: 1px solid $lightGray;
