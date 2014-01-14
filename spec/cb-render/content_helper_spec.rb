@@ -39,7 +39,7 @@ describe ContentHelper do
 
     it 'renders url properties as link' do
       rendered = display_content_property('url_prop', {'title' => 'Url property', 'value' => 'http://contenbird.com', 'type' => 'url'})
-      rendered.should eq '<p class="cb-type-url cb-prop-url_prop">Url property: <a href="http://contenbird.com">http://contenbird.com</a></p>'
+      rendered.should eq '<p class="cb-type-url cb-prop-url_prop">Url property: <a href="http://contenbird.com" target="_blank">http://contenbird.com</a></p>'
     end
 
     it 'renders memo properties using simpleformat' do
