@@ -1,5 +1,5 @@
 cb.decorateModal = () ->
-  $('#modal').on 'click', '._close', (event) ->
+  $('body').on 'click', '.modal-overlay, #modal ._close', (event) ->
     cb.closeModal()
     event.preventDefault()
 
