@@ -22,18 +22,8 @@ module ContentHelper
       display_first_gallery_image name, data, options
     else
       options  = default_options.merge(options)
-      html_gallery = []
       if data['value'].present?
-        data['value'].each do |image|
-          image_html = "<figure><div class=\"image-content\" style=\"background-image: url(#{image['url']}); padding-bottom: 30px\"></div>"
-          image_html += "<figcaption>#{image['legend']}</figcaption></figure>" if image['legend'].present?
-          html_gallery << "<li class=\"image-container\">#{image_html}</li>"
-        end
-        content_tag :div, class: "row cb-type-img_gal cb-prop-#{name}" do
-          content_tag :ul do
-            raw html_gallery.join
-          end
-        end
+        render partial: 'cb-render/templates/image_gallery', locals: {name: name, data: data, options: options}
       end
     end
   end

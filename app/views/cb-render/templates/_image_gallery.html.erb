@@ -1,0 +1,14 @@
+<div class="row cb-type-img_gal cb-prop-<%= name %>">
+    <ul class="_images">
+        <% data['value'].each do |image| %>
+            <li class="image-container _imageContainer" data-image="<%=image['url']%>" data-legend="<%= image['legend'] %>">
+                <figure>
+                    <div class="image-content" style="background-image: url(<%=image['url']%>); padding-bottom: 30px"></div>
+                    <% if image['legend'].present? %>
+                        <figcaption><%= image['legend'] %></figcaption>
+                    <% end %>
+                </figure>
+            </li>
+        <% end %>
+    </ul>
+</div>
