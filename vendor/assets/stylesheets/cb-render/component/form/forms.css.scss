@@ -87,6 +87,12 @@ input[type="email"].h5fError,
 input[type="password"].h5fError,
 input[type="text"].h5fError,
 .h5fError._typeSelect,
+input[type="tel"].h5fRequired,
+input[type="url"].h5fRequired,
+input[type="email"].h5fRequired,
+input[type="password"].h5fRequired,
+input[type="text"].h5fRequired,
+.h5fRequired._typeSelect
  {
 	border: 2px solid $red;
 }
@@ -98,9 +104,9 @@ input[type="submit"]:hover {
 input[type="tel"]:focus,
 input[type="url"]:focus,
 input[type="email"]:focus,
-input[type="password"]:focus, 
+input[type="password"]:focus,
 input[type="text"]:focus,
-textarea:focus, 
+textarea:focus,
 select:focus {
 	outline: 0;
 	border-color: $green;
@@ -128,7 +134,8 @@ input[type="text"]:focus.formTitle {
 }
 
 input[type="text"].inputError.formTitle,
-input[type="text"].h5fError.formTitle {
+input[type="text"].h5fError.formTitle,
+input[type="text"].h5fRequired.formTitle {
 	background: $white;
 	border: 2px solid $red;
 }
