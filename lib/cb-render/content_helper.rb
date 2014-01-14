@@ -91,7 +91,7 @@ module ContentHelper
     options  = default_options.merge(options)
     content_tag :p, class: "cb-type-url cb-prop-#{name}" do
       if options[:display_label]
-        raw("#{data['title']}: <a href=\"#{data['value']}\">#{data['value']}</a>")
+        raw("#{data['title']}: <a href=\"#{data['value']}\" target=\"_blank\">#{data['value']}</a>")
       else
         data['value']
       end
