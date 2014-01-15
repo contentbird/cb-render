@@ -1,5 +1,5 @@
 cb.decorateModal = () ->
-  $('body').on 'click', '.modal-overlay, #modal ._close', (event) ->
+  $('body').on 'click touchend', '.modal-overlay, #modal ._close', (event) ->
     cb.closeModal()
     event.preventDefault()
 
