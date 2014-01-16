@@ -12,10 +12,11 @@ cb.openGalleryModal = (caller) ->
   caller = caller.closest('._imageContainer')
   displayImageZoom(caller)
   decorateGalleryNavLinks()
+  $('#modal').addClass('litebox')
   openModal(caller.closest('._images'))
 
 cb.closeModal = () ->
-  $('#modal').removeClass('show')
+  $('#modal').removeClass('show litebox')
 
 openModal = (caller) ->
   cb.modal_caller = caller
