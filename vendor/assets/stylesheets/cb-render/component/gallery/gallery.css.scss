@@ -6,6 +6,10 @@
     width: 300px;
 }
 
+.ui-sortable .image-container {
+    cursor: move;
+}
+
 .image-placeholder {
     @extend .image-container;
     height: 345px;
