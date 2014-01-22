@@ -8,3 +8,11 @@
 	position: relative;
 	height: 125px;
 }
+
+.image-widget {
+	&:after {
+		content: '';
+		display:block;
+		clear: both;
+    }
+}
