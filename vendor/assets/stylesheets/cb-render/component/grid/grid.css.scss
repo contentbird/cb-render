@@ -13,6 +13,10 @@
 	@include display(flex);
 }
 
+.row {
+	@include flex-flow(row-wrap);
+}
+
 .cell {
 	margin-top: $padding;
 	margin-bottom: $padding; 

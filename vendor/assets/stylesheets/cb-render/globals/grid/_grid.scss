@@ -84,3 +84,12 @@
   -webkit-order: $prop;
   order: $prop;
 }
+
+/* flex wrap */
+@mixin flex-flow($prop) {
+  -webkit-flex-flow: $prop;
+  -moz-flex-flow: $prop;
+  -ms-flex-flow: $prop;
+  flex-flow: $prop;
+  flex-wrap: wrap;
+}
