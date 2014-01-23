@@ -11,7 +11,7 @@ cb.decorateUrl = (widget) ->
 
 identifyPlayerAndItemId = (url) ->
   return ['youtube',    RegExp.$1] if url.match /^(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/
-  return ['soundcloud', url      ] if url.match /^(?:https?:\/\/)?(?:www\.)?(?:soundcloud\.com\/.*)?$/
+  return ['soundcloud', url      ] if url.match /^(?:https?:\/\/)?(?:www\.)?soundcloud\.com\/.*$/
   return [null,         null]
 
 renderPlayer = (widget, playerName, itemId) ->
