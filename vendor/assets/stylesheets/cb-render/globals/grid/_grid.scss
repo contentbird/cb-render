@@ -86,10 +86,7 @@
 }
 
 /* flex wrap */
-@mixin flex-flow($prop) {
-  -webkit-flex-flow: $prop;
-  -moz-flex-flow: $prop;
-  -ms-flex-flow: $prop;
-  flex-flow: $prop;
+@mixin flex-flow {
+  -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
 }

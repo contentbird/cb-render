@@ -14,7 +14,23 @@
 }
 
 .row {
-	@include flex-flow(row-wrap);
+	@include flex-flow;
+}
+
+/* fallback flexbox wrap Firefox < 28 */
+@supports not (flex-wrap: wrap) {
+	.publications .row .cell {
+		float: left;
+	}
+	.publications .row {
+		display: inline-block;
+	}
+}
+
+@supports (flex-wrap: wrap) {
+	.publications .row .cell {
+		float: none;
+	}
 }
 
 .cell {
