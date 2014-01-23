@@ -7,3 +7,12 @@
     <a href="#" id="nextImage" class="image-next" data-target-index="{%=o.nextIndex%}" data-icon="&#xe60e;"></a>
     <a href="#" id="closeImage" class="image-close _close" data-target-index="" data-icon="&#xe00b;"></a>
 </script>
+
+<script id="cb-template-player-youtube" type="text/x-tmpl">
+    <iframe src="http://www.youtube.com/embed/{%=o.itemId%}" width="100%" height="390" frameborder="0"/>
+</script>
+
+<script id="cb-template-player-soundcloud" type="text/x-tmpl">
+    <iframe src="https://w.soundcloud.com/player/?url={%=o.itemId%}&color=ff5500",
+            width="100%" height="166" scrolling="no" frameborder="no" ></iframe>
+</script>

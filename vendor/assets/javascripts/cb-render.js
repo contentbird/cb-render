@@ -5,3 +5,4 @@
 //= require cb-render/cb_base
 //= require cb-render/modal
 //= require cb-render/gallery
+//= require cb-render/url
