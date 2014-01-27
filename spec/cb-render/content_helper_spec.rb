@@ -62,7 +62,7 @@ describe ContentHelper do
       without_code_coloring.should eq "<div class=\"cb-type-markdown cb-prop-mark_prop\"><p>this <strong>is</strong></p>\n\n<blockquote>\n<p>multiline</p>\n</blockquote>\n\n<pre><code class=\"ruby\" data-language=\"ruby\">def test\n  puts 'test'\nend\n</code></pre>\n\n<p>classy!</p>\n</div>"
     end
 
-    it 'renders image gallery properties displaying every images' do
+    xit 'renders image gallery properties displaying every images' do
       rendered = display_content_property('image_gallery_prop',
                                           {'title' => 'Image property',
                                            'value' => [{'url' => 'http://img.us/test.jpg', 'legend' => 'image test'},
