@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/contentbird/cb-render"
   s.license = ""
 
-  s.add_runtime_dependency     'sass-rails',  '= 4.0'
+  s.add_runtime_dependency     'sass-rails',  '~> 4.0'
   s.add_runtime_dependency     'pygments.rb', '~> 0.5'
   s.add_runtime_dependency     'redcarpet',   '~> 3.0'
   s.add_runtime_dependency     'actionpack'
