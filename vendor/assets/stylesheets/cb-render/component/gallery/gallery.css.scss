@@ -20,7 +20,7 @@
         content: 'Drop here!';
         vertical-align: middle;
         line-height: 345px;
-        
+
     }
 }
 
@@ -66,11 +66,11 @@
     justify-content: center;
 }
 
-.image-previous, 
+.image-previous,
 .image-next {
     position: absolute;
-    top: 50%; 
-    color: $white; 
+    top: 50%;
+    color: $white;
     font-size: $mediumSizeText;
     opacity: 0.6;
     &[data-icon]:before {
@@ -88,13 +88,13 @@
 
 .image-next {
     right: 0;
-    
+
 }
 
 .image-next,
 .image-close {
     &[data-icon]:before {
-           margin-right: inherit; 
+           margin-right: inherit;
     }
 }
 
