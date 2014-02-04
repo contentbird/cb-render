@@ -2,6 +2,10 @@ cb.decorateUrls = () ->
   $('.cb-type-url').each () ->
     cb.decorateUrl $(this)
 
+cb.decorateMarkdownLinks = () ->
+  $('.cb-type-markdown').each () ->
+    cb.decorateUrl $(this)
+
 cb.decorateUrl = (zone) ->
   links = zone.find('a')
   links.each () ->
