@@ -2,6 +2,9 @@ cb.decorateModal = () ->
   $('body').on 'click touchend', '.modal-overlay, #modal ._close', (event) ->
     cb.closeModal()
     event.preventDefault()
+  $('body').on 'click', '._openAjaxModal', (event) ->
+    cb.openAjaxModal($(this).attr('href'))
+    event.preventDefault()
 
 cb.openAjaxModal = (url, caller) ->
   $.get url, (data) =>
