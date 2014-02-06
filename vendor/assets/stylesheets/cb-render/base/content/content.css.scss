@@ -24,17 +24,19 @@ CSS GUIDE
 
 html {
 	height: 100%;
-    font-size: $smallSizeText;
 	font-family: $contentFont;
 	/* default root font-size */
 	font-size: 100%;
+	font-weight: 100;
+	
 }
 
 body {
   	margin: 0;
   	padding: 0;
 	height: 100%;
-	color: $txtColor;
+	color: $black;
+	font-size: $smallSizeText;
 }
 
 img {
@@ -61,6 +63,11 @@ ul {
 	list-style-type: none;
 }
 
+li {
+	line-height: $lineHeight;
+	margin-bottom: $padding;
+}
+
 /* page */
 .page {
 	width: 100%;
@@ -73,7 +80,7 @@ label {
 
 /* paragraphe */
 p {
-	line-height: 1.125rem;
+	line-height: $lineHeight;
 }
 
 /* space */

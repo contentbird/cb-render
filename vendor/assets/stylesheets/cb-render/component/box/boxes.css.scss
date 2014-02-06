@@ -13,9 +13,12 @@ CSS GUIDE
 	background: $white;
 	padding: $padding;
 	& h2 {
-		margin: 0; padding: 0;
+		margin: 0; 
+		padding: 0;
 	}
-
+	&.transparent {
+		background: transparent;
+	}
 }
 
 /* box sub-modules */

@@ -23,6 +23,16 @@
           box-shadow:  $off-y $off-x $blur $color;
 }
 
+/* ================== background image cover ================== */
+@mixin cover($url) {
+	background-image: image-url($url);
+	background-position: center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
 /* ================== mobilefirst breakpoints ================== */
 $medium: 40.063em;
 $large: 64em;
@@ -34,4 +44,16 @@ $large: 64em;
     @else if $point == large {
         @media only screen and (min-width: $large) { @content; }
     }
+}
+
+/* ================== calculate rems ================== */
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+//Default font size on html element is 100%, equivalent to 16px;
+  @return #{$remSize}rem;
+}
+
+@mixin fontSize($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
 }

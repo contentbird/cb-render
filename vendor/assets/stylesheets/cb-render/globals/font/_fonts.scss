@@ -1,9 +1,11 @@
 /* variables Font */
 $titleFont: normal, futura-pt, sans-serif;
 $weightTitleFont: 100;
-$contentFont: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+$contentFont: normal, futura-pt, sans-serif;
+$lineHeight: 1.375rem;
 
 /* variables Text Size, $rembase = 16px  */ 
-$smallSizeText: 1.125rem; /* 16 ÷ $rembase */
-$mediumSizeText: 2.25rem; /* $rembase *2 */
-$largeSizeText: 3.375rem; /* $rembase *3 */
+$smallSizeText: 1.375rem; /* $rembase (22px) */
+$mediumSizeText: 1.375rem*2; /* $rembase *2 */
+$largeSizeText: 1.375rem*3; /* $rembase *3 */
+

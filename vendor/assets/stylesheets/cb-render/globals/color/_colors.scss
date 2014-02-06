@@ -1,5 +1,6 @@
 /* variables color */
 $white:			#ffffff;
+$black:			#000000;
 
 $darkGray:  	#333333;
 $gray:          lighten($darkGray, 34%);
@@ -22,6 +23,7 @@ $alertColor: 	$red;
 
 /* text color */
 $txtColor: 		$darkGray;
+$pColor: 		lighten($darkGray, 15%);
 
 /* link color */
 $linkColor: 	$blue;
