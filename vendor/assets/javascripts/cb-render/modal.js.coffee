@@ -2,11 +2,18 @@ cb.decorateModal = () ->
   $('body').on 'click touchend', '.modal-overlay, #modal ._close', (event) ->
     cb.closeModal()
     event.preventDefault()
+  $('body').on 'click', '._openLargeModal', (event) ->
+    cb.openLargeAjaxModal($(this).attr('href'))
+    event.preventDefault()
 
 cb.openAjaxModal = (url, caller) ->
   $.get url, (data) =>
     $('#modal').html(data).show()
     openModal(caller)
+
+cb.openLargeAjaxModal = (url, caller) ->
+  $('#modal').addClass('largebox')
+  cb.openAjaxModal(url, caller)
 
 cb.openGalleryModal = (caller) ->
   caller = caller.closest('._imageContainer')
@@ -16,7 +23,7 @@ cb.openGalleryModal = (caller) ->
   openModal(caller.closest('._images'))
 
 cb.closeModal = () ->
-  $('#modal').removeClass('show lightbox')
+  $('#modal').removeClass('show lightbox largebox')
 
 openModal = (caller) ->
   cb.modal_caller = caller
