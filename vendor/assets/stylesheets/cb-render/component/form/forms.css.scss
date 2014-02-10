@@ -1,3 +1,9 @@
+input[type="submit"],
+select,
+textarea {
+	line-height: $padding;
+}
+
 input[type="tel"],
 input[type="url"],
 input[type="email"],
@@ -34,7 +40,7 @@ textarea, select  {
 }
 
 input[type="search"]{
-	padding: $padding;
+	padding: $padding/2;
 	width: 100%;
 	border: none;
 	border-radius: none;

@@ -1,11 +1,13 @@
 .butn {
     display: inline-block;
     padding: $padding/2;
+    line-height: 1.375rem;
     border: none;
     background-color: $gray;
     color: $white;
     &.action{
         background-color: $blue;
+        border: 2px solid $blue;
     }
     &.togl-off {
         border: 2px solid $lightGray;
@@ -41,8 +43,7 @@
         &.togl-on {
             border-top-right-radius: 0;
             border-bottom-right-radius: 0;
-        }
-        
+        }   
     }
     &.combo-r._seePublication {
         @extend .togl-on;
@@ -55,12 +56,14 @@
         border: 2px dashed $darkGray;
         background-color: $white;
         color: $darkGray;
+        font-weight: normal;
     }
     &.delete{
         background-color: $red;
     }
     &.signUp {
         background-color: $green;
+        border: 2px solid $green;
     }
     &:hover {
         color: $white;
@@ -76,6 +79,7 @@
 .butn-no-text {
     @extend .butn;
     padding-right: 0;
+    border: 2px solid $gray;
 }
 
 .butn-close {

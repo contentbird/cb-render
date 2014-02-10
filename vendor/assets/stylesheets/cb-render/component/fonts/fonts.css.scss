@@ -9,8 +9,8 @@
     font-style: normal;
 }
 
+
 [data-icon] {
-    font-size: 1.375rem;
     color: $darkGray;
     &:before {
         font-family: 'contentbird';
@@ -19,9 +19,8 @@
         font-weight: normal;
         font-variant: normal;
         text-transform: none;
-        line-height: 1;
+        vertical-align: top;
         -webkit-font-smoothing: antialiased;
-        vertical-align: text-bottom;
         margin-right: $padding/2;
     }
     &:hover {
