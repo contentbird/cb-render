@@ -2,10 +2,23 @@
 $titleFont: normal, futura-pt, sans-serif;
 $weightTitleFont: 100;
 $contentFont: normal, futura-pt, sans-serif;
-$lineHeight: 1.375rem;
+
+
+$smallLineHeight: 1.375rem; /* base 22px */
+$mediumLineHeight: 1.375rem*2;
+$largeLineHeight: 1.375rem*3;
+
+$smallLineHeightDevices: 1.125rem; /* base 22px */
+$mediumLineHeightDevices: 1.125rem*2;
+$largeLineHeightDevices: 1.125rem*2;
+
 
 /* variables Text Size, $rembase = 16px  */ 
 $smallSizeText: 1.375rem; /* $rembase (22px) */
 $mediumSizeText: 1.375rem*2; /* $rembase *2 */
 $largeSizeText: 1.375rem*3; /* $rembase *3 */
 
+/* variables Text Size, $rembase = 16px  */ 
+$smallSizeTextDevices: 1.125rem; /* $rembase (18px) */
+$mediumSizeTextDevices: 1.125*2; /* $rembase *2 */
+$largeSizeTextDevices: 1.125*3; /* $rembase *3 */

@@ -1,18 +1,30 @@
 h1, .h1 {
-    font-size: $largeSizeText;
+	@include bp(large){
+		font-size: $largeSizeText;
+		line-height: $largeLineHeight;
+	}
+	font-size: $largeSizeTextDevices;
+	line-height: $largeLineHeightDevices;
     font-family: $titleFont;
     font-weight: 100;
-    line-height: $lineHeight*3;
 }
 
 h2, .h2 {
 	@extend h1;
-	font-size: $mediumSizeText;
-	line-height: $lineHeight*2;
+	@include bp(large){
+		font-size: $mediumSizeText;
+		line-height: $mediumLineHeight;
+	}
+	font-size: $mediumSizeTextDevices;
+	line-height: $mediumLineHeightDevices;
 }
 
 h3, .h3 {
 	@extend h1;
+	@include bp(large){
+		font-size: $smallSizeText;
+		line-height: $smallLineHeight;
+	}
 	font-size: $smallSizeText;
-	line-height: $lineHeight;
+	line-height: $smallLineHeightDevices;
 }
