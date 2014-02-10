@@ -33,22 +33,20 @@ select,
 textarea {
 	font-family: $contentFont;
 	/* default root font-size */
-	font-size: 100%;
 	font-weight: 100;
+	font-size: 100%;
 }
 
 body {
-	@include bp(large){
-		font-size: $smallSizeText;
-	}
-	@include bp(medium){
-		font-size: $smallSizeText;
-	}
   	margin: 0;
   	padding: 0;
 	height: 100%;
 	color: $black;
-	font-size: $smallSizeTextDevices;
+
+
+		font-size: $smallSizeText;
+		line-height: $smallLineHeight
+
 }
 
 img {
@@ -91,9 +89,6 @@ label {
 
 /* paragraphe */
 p {
-	@include bp(large){
-		line-height: $smallLineHeight;
-	}
 	line-height: $smallLineHeight;
 }
 
