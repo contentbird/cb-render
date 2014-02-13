@@ -52,6 +52,11 @@ describe ContentHelper do
       rendered.should eq '<figure class="cb-type-image cb-prop-image_prop "><img alt="Image property" src="http://img.us/test.jpg" /></figure>'
     end
 
+    it 'renders image thumbnail if option summary is provided' do
+      rendered = display_content_property('image_prop', {'title' => 'Image property', 'value' => "http://img.us/test.png", 'type' => 'image'}, summary: true)
+      rendered.should eq '<figure class="cb-type-image cb-prop-image_prop "><img alt="Image property" src="http://img.us/test_thumb.jpg" /></figure>'
+    end
+
     it 'renders markdown with code embedded with or without code coloring, depending on the option passed' do
       prop = {'title' => 'Markdown property', 'value' => "this **is**\n >multiline\n\n```ruby\ndef test\n  puts 'test'\nend\n```\n classy!", 'type' => 'markdown'}
 
@@ -78,7 +83,16 @@ describe ContentHelper do
                                            'value' => [{'url' => 'http://img.us/test.jpg', 'legend' => 'image test'},
                                                        {'url' => 'http://img.us/test2.jpg', 'legend' => 'image test 2'}],
                                            'type' => 'image_gallery'}, summary: true)
-      rendered.should eq '<figure class="cb-type-image cb-prop-image_gallery_prop "><img alt="image test" src="http://img.us/test.jpg" /></figure>'
+      rendered.should eq '<figure class="cb-type-image cb-prop-image_gallery_prop "><img alt="image test" src="http://img.us/test_thumb.jpg" /></figure>'
+    end
+  end
+
+  describe '#thumbnail_url' do
+    it 'returns the same url provided but addding _thumb to the file name and switching to .jpg extension' do
+      thumbnail_url('http://www.mysite.com/folder/my_image.png').should eq 'http://www.mysite.com/folder/my_image_thumb.jpg'
+    end
+    it 'returns nil if nil given' do
+      thumbnail_url(nil).should be_nil
     end
   end
 

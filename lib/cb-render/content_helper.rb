@@ -12,8 +12,9 @@ module ContentHelper
 
   def display_image_property name, data, options={}
     options  = default_options.merge(options)
+    image_url = options[:summary] ? thumbnail_url(data['value']) : data['value']
     content_tag :figure, class: "cb-type-image cb-prop-#{name} #{options[:wrapper_class]}" do
-      image_tag data['value'], alt: data['title']
+      image_tag image_url, alt: data['title']
     end
   end
 
@@ -124,5 +125,10 @@ module ContentHelper
 
     html = Redcarpet::Markdown.new(renderer, markdown_options).render(text)
     html.html_safe
+  end
+
+  def thumbnail_url url
+    return nil if url.nil?
+    url.gsub(/(?<path>.*)\.([a-z|A-Z]*)$/, '\k<path>_thumb.jpg')
   end
 end
