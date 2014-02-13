@@ -32,6 +32,17 @@ nav [data-icon] {
     color: $white;
 }
 
+
+.features [data-icon] {
+    font-size: $mediumSizeText;   
+    color: $gray;
+    text-align: center;
+    margin: $padding;
+    &:hover {
+        color: lightGray;
+    }
+}
+
 .selected[data-icon] {
     color: $darkGray;
 }
