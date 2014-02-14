@@ -43,6 +43,16 @@ nav [data-icon] {
     }
 }
 
+.dashboard [data-icon] {
+    font-size: $largeSizeText;   
+    color: $gray;
+    text-align: center;
+    margin: $padding;
+    &:hover {
+        color: lightGray;
+    }
+}
+
 .selected[data-icon] {
     color: $darkGray;
 }

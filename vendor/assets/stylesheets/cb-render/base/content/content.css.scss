@@ -138,10 +138,12 @@ h2, h3, h4, h5, h6 {
 /* Text Size */
 .mTxt {
 	font-size: $mediumSizeText;
+	line-height: $mediumLineHeight;
 }
 
 .lTxt {
 	font-size: $largeSizeText;
+	line-height: $largeLineHeight;
 }
 
 .center {

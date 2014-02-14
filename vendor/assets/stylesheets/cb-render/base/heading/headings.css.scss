@@ -29,14 +29,13 @@ h2, .h2 {
 
 h3, .h3 {
 	@extend h1;
-	font-size: $smallSizeText/2;
-	line-height: $smallLineHeight/1.5;
+	font-size: $largeSizeText/2.4;
+	line-height: $largeLineHeight/2;
 	@include bp(medium) {
-		font-size: $smallSizeText/1.5;
-		line-height: $smallLineHeight/1.3;
+		font-size: $largeSizeText/2.4;
+		line-height: $largeLineHeight/2;
 	}
 	@include bp(large) {
-		font-size: $smallSizeText;
-		line-height: $smallLineHeight;
+		font-size: $largeSizeText/2.4;
 	}	
 }
