@@ -28,6 +28,12 @@
     }
 }
 
+[data-icon].accountLink:before {
+    background-color: $gray;
+    @include roundedBorders;
+
+}
+
 nav [data-icon] {
     color: $white;
 }
