@@ -42,11 +42,8 @@ body {
   	padding: 0;
 	height: 100%;
 	color: $black;
-
-
-		font-size: $smallSizeText;
-		line-height: $smallLineHeight
-
+	font-size: $smallSizeText;
+	line-height: $smallLineHeight
 }
 
 img {
@@ -176,7 +173,6 @@ h2, h3, h4, h5, h6 {
 
 .butnMenu {
     position: absolute;
-    position: absolute;
     right: $padding;
     left: $padding;
     z-index: 1000;
@@ -199,6 +195,7 @@ h2, h3, h4, h5, h6 {
     & ul, & h2 {
         @include display(flex);
         @include justify-content(center);
+        @include flex-flow;
         & li {
         	margin-right: $padding;
         }
