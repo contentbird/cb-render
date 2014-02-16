@@ -7,6 +7,10 @@
 /* row & cell */ 
 .row, .cell-content {
  	@include display(flex);
+ 	@include bp(large) {
+ 		@include flex-direction(row);
+ 	}
+ 	@include flex-direction(column);
 }
  
 .row, .cell-content {
@@ -34,8 +38,19 @@
 }
 
 .cell {
-	margin-top: $padding;
-	margin-bottom: $padding; 
+	width: 100%;
+	text-align: center;
+	margin-top: $padding;	
+	@include bp(large) {
+        margin-bottom: $padding;
+        width: inherit;
+        text-align: inherit;
+    }
+    @include bp(medium) {
+        margin-bottom: $padding;
+        width: inherit;
+        text-align: inherit;
+    }
 	word-wrap:break-word;
 	& p {
 		margin-top: 0;
@@ -101,7 +116,10 @@
 			border-bottom: none;
 		}
 		& .butn {
-			margin-bottom: 0;
+			@include bp(large) {
+				margin-bottom: 0;
+			}
+			margin-bottom: $padding;
 		}
 	}
 	& .sub-row {
@@ -126,7 +144,6 @@
 @media only screen
 and (min-width : 320px)
 and (max-width : 480px){
-
 	.box {
 		padding: inherit;
 	}

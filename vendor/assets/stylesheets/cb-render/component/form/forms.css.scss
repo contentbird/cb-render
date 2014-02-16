@@ -73,6 +73,13 @@ input[type="submit"] {
 	border: none;
 	background-color: $blue;
 	color: $white;
+	width: 100%;
+	@include bp(large) {
+        width: inherit;
+    }
+    @include bp(medium) {
+        width: inherit;
+    }
 }
 
 input[type="submit"].signIn,
@@ -154,7 +161,12 @@ input[type="text"].h5fRequired.formTitle {
 
 
 .cell .butn {
-	margin-left: $padding/2;
+	@include bp(large) {
+        margin-left: $padding/2;
+    }
+    @include bp(medium) {
+        margin-left: $padding/2;
+    }
 }
 
 /* input type file */
@@ -206,7 +218,10 @@ label, .optionsContent label{
 
 /* select */
 select {
-	width: 20%;
+	@include bp(large) {
+		width: 20%;
+	}
+	width: 100%;
 	background: image-url('forms/dropdown.png') no-repeat right center;
 	cursor: pointer;
 }

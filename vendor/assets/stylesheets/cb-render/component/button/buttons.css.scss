@@ -1,4 +1,16 @@
 .butn {
+    width: 100%;
+    text-align: center;
+    @include bp(large) {
+        width: inherit;
+        text-align: inherit;
+        margin: 0;
+    }
+    @include bp(medium) {
+        width: inherit;
+        text-align: inherit;
+        margin: 0;
+    }
     display: inline-block;
     padding: $padding/2;
     line-height: 1.375rem;
@@ -38,21 +50,32 @@
     &.togl-on{
         border: 2px solid $green;
         background-color: $green;
+
+        margin-bottom: 1px;
     }
     &.combo-l, &.combo-r {
         float: left;   
     }
     &.combo-l {
         &.togl-on {
-            border-top-right-radius: 0;
+            @include bp(large) {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+            border-bottom-left-radius: 0;
             border-bottom-right-radius: 0;
         }   
     }
     &.combo-r._seePublication {
         @extend .togl-on;
+        @include bp(large) {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            margin-left: 1px;
+        }
         border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-        margin-left: 1px;
+        border-top-right-radius: 0;
+        
     }
     &._addFields, &._addFields:hover  {
         display: block;
@@ -88,6 +111,7 @@
     @extend .butn;
     padding-right: 0;
     border: 2px solid $gray;
+
 }
 
 .butn-close {
@@ -100,3 +124,11 @@ header .butn {
     float: right;
     margin-top: 0;
 }
+
+
+.image-add {
+    & .butn-no-text {
+        width: auto;
+    }
+}
+
