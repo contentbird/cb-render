@@ -67,14 +67,14 @@ describe ContentHelper do
       without_code_coloring.should eq "<div class=\"cb-type-markdown cb-prop-mark_prop\"><p>this <strong>is</strong></p>\n\n<blockquote>\n<p>multiline</p>\n</blockquote>\n\n<pre><code class=\"ruby\" data-language=\"ruby\">def test\n  puts 'test'\nend\n</code></pre>\n\n<p>classy!</p>\n</div>"
     end
 
-    xit 'renders image gallery properties displaying every images' do
+    it 'renders image gallery properties displaying every images' do
       rendered = display_content_property('image_gallery_prop',
                                           {'title' => 'Image property',
                                            'value' => [{'url' => 'http://img.us/test.jpg', 'legend' => 'image test'},
                                                        {'url' => 'http://img.us/test2.jpg', 'legend' => 'image test 2'}],
                                            'type' => 'image_gallery'})
 
-      rendered.should eq '<div class="row cb-type-img_gal cb-prop-image_gallery_prop"><ul><li class="image-container"><figure><div class="image-content" style="background-image: url(http://img.us/test.jpg); padding-bottom: 30px"></div><figcaption>image test</figcaption></figure></li><li class="image-container"><figure><div class="image-content" style="background-image: url(http://img.us/test2.jpg); padding-bottom: 30px"></div><figcaption>image test 2</figcaption></figure></li></ul></div>'
+      rendered.should eq '<div class="row cb-type-img_gal cb-prop-image_gallery_prop"><ul class="_images"><li class="image-container _imageContainer" data-image="http://img.us/test.jpg" data-legend="image test"><figure><div class="image-content" style="background-image: url(http://img.us/test_thumb.jpg); padding-bottom: 30px"><figcaption>image test</figcaption></div></figure></li><li class="image-container _imageContainer" data-image="http://img.us/test2.jpg" data-legend="image test 2"><figure><div class="image-content" style="background-image: url(http://img.us/test2_thumb.jpg); padding-bottom: 30px"><figcaption>image test 2</figcaption></div></figure></li></ul></div>'
     end
 
     it 'renders the first image using the legend as a title if summary option is passed' do

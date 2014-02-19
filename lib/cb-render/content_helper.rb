@@ -24,7 +24,21 @@ module ContentHelper
     else
       options  = default_options.merge(options)
       if data['value'].present?
-        render partial: 'cb-render/templates/image_gallery', locals: {name: name, data: data, options: options}
+        content_tag :div, class: "row cb-type-img_gal cb-prop-#{name}" do
+          content_tag :ul, class: "_images" do
+            data['value'].each do |image|
+              concat(content_tag(:li, nil, class: "image-container _imageContainer", data: {image: image['url'], legend: image['legend']}) do
+                content_tag :figure do
+                  content_tag :div, class: 'image-content', style: "background-image: url(#{thumbnail_url(image['url'])}); padding-bottom: 30px" do
+                    content_tag :figcaption do
+                      image['legend'] if image['legend'].present?
+                    end
+                  end
+                end
+              end)
+            end
+          end
+        end
       end
     end
   end
