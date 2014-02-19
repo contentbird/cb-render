@@ -30,8 +30,10 @@ module ContentHelper
               concat(content_tag(:li, nil, class: "image-container _imageContainer", data: {image: image['url'], legend: image['legend']}) do
                 content_tag :figure do
                   content_tag :div, class: 'image-content', style: "background-image: url(#{thumbnail_url(image['url'])}); padding-bottom: 30px" do
-                    content_tag :figcaption do
-                      image['legend'] if image['legend'].present?
+                    if image['legend'].present?
+                      content_tag :figcaption do
+                        image['legend']
+                      end
                     end
                   end
                 end

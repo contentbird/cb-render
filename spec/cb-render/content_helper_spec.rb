@@ -71,10 +71,10 @@ describe ContentHelper do
       rendered = display_content_property('image_gallery_prop',
                                           {'title' => 'Image property',
                                            'value' => [{'url' => 'http://img.us/test.jpg', 'legend' => 'image test'},
-                                                       {'url' => 'http://img.us/test2.jpg', 'legend' => 'image test 2'}],
+                                                       {'url' => 'http://img.us/test2.jpg', 'legend' => ''}],
                                            'type' => 'image_gallery'})
 
-      rendered.should eq '<div class="row cb-type-img_gal cb-prop-image_gallery_prop"><ul class="_images"><li class="image-container _imageContainer" data-image="http://img.us/test.jpg" data-legend="image test"><figure><div class="image-content" style="background-image: url(http://img.us/test_thumb.jpg); padding-bottom: 30px"><figcaption>image test</figcaption></div></figure></li><li class="image-container _imageContainer" data-image="http://img.us/test2.jpg" data-legend="image test 2"><figure><div class="image-content" style="background-image: url(http://img.us/test2_thumb.jpg); padding-bottom: 30px"><figcaption>image test 2</figcaption></div></figure></li></ul></div>'
+      rendered.should eq '<div class="row cb-type-img_gal cb-prop-image_gallery_prop"><ul class="_images"><li class="image-container _imageContainer" data-image="http://img.us/test.jpg" data-legend="image test"><figure><div class="image-content" style="background-image: url(http://img.us/test_thumb.jpg); padding-bottom: 30px"><figcaption>image test</figcaption></div></figure></li><li class="image-container _imageContainer" data-image="http://img.us/test2.jpg" data-legend=""><figure><div class="image-content" style="background-image: url(http://img.us/test2_thumb.jpg); padding-bottom: 30px"></div></figure></li></ul></div>'
     end
 
     it 'renders the first image using the legend as a title if summary option is passed' do
