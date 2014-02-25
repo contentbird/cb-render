@@ -83,9 +83,9 @@ module ContentHelper
     end
   end
 
-  def display_tel_property name, data, options={}
+  def display_phone_property name, data, options={}
     options  = default_options.merge(options)
-    content_tag :p, class: "cb-type-tel cb-prop-#{name}" do
+    content_tag :p, class: "cb-type-phone cb-prop-#{name}" do
       if options[:display_label]
         "#{data['title']}: #{data['value']}"
       else

@@ -32,9 +32,9 @@ describe ContentHelper do
       rendered.should eq '<p class="cb-type-email cb-prop-email_prop ">Email property: <a href="mailto:test@test.com">test@test.com</a></p>'
     end
 
-    it 'renders tel properties as normal text' do
-      rendered = display_content_property('tel_prop', {'title' => 'Tel property', 'value' => '01 09 09 87 36', 'type' => 'tel'})
-      rendered.should eq '<p class="cb-type-tel cb-prop-tel_prop">Tel property: 01 09 09 87 36</p>'
+    it 'renders phone properties as normal text' do
+      rendered = display_content_property('phone_prop', {'title' => 'Phone property', 'value' => '01 09 09 87 36', 'type' => 'phone'})
+      rendered.should eq '<p class="cb-type-phone cb-prop-phone_prop">Phone property: 01 09 09 87 36</p>'
     end
 
     it 'renders url properties as link' do
