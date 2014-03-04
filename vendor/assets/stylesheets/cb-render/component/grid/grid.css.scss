@@ -18,7 +18,9 @@
 }
 
 .row {
-	@include flex-flow;
+	@include bp(large) {
+		@include flex-flow;
+	}
 }
 
 /* fallback flexbox wrap Firefox < 28 */
