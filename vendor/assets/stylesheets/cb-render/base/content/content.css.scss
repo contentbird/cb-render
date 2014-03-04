@@ -97,13 +97,6 @@ h1,h2,h3,h4,h5,h6,hgroup,ul,ol,dd,p,figure,pre,table,fieldset,hr, a.butn, .box, 
     margin-bottom: 1.375rem;
 }
 
-h1,h2,h3,h4,h5,h6 {
-	@include bp(large) {
-		margin-top: 1.375rem;
-	}
-	margin-top: 1.375rem;
-}
-
 h3 {
 	margin-bottom: $padding/4;
 }
