@@ -30,6 +30,7 @@ h2, .h2 {
 h3, .h3 {
 	@extend h1;
 	font-size: $largeSizeText/2.4;
+	text-align: center;
 	line-height: $largeLineHeight/2;
 	@include bp(medium) {
 		font-size: $largeSizeText/2.4;
@@ -37,5 +38,6 @@ h3, .h3 {
 	}
 	@include bp(large) {
 		font-size: $largeSizeText/2.4;
-	}	
+		text-align: inherit;
+	}
 }
