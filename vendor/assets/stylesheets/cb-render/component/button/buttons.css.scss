@@ -35,11 +35,11 @@
     }
     &.togl-work{
         @extend .togl-off;
-        border-color: $green; 
+        border-color: $green;
         color: $green;
         &:hover {
             @extend .togl-work;
-            opacity: 1;   
+            opacity: 1;
         }
         &:before {
             @include rotation (rotation, 2s, infinite, linear);
@@ -52,7 +52,7 @@
         margin-bottom: 1px;
     }
     &.combo-l, &.combo-r {
-        float: left;   
+        float: left;
     }
     &.combo-l {
         &.togl-on {
@@ -62,7 +62,7 @@
             }
             border-bottom-left-radius: 0;
             border-bottom-right-radius: 0;
-        }   
+        }
     }
     &.combo-r._seePublication {
         @extend .togl-on;
@@ -73,7 +73,7 @@
         }
         border-top-left-radius: 0;
         border-top-right-radius: 0;
-        
+
     }
     &._addFields, &._addFields:hover  {
         display: block;
@@ -87,11 +87,10 @@
     }
     &.signUp {
         background-color: $green;
-        border: 2px solid $green;
     }
     &.background {
         background-color: transparent;
-        border: 2px solid $white;  
+        border: 2px solid $white;
     }
     &:hover {
         color: $white;
