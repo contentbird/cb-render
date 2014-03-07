@@ -4,15 +4,15 @@
 	@include flex-direction(row);
 }
 
-/* row & cell */ 
+/* row & cell */
 .row, .cell-content {
  	@include display(flex);
- 	@include bp(large) {
+ 	@include bp(medium) {
  		@include flex-direction(row);
  	}
  	@include flex-direction(column);
 }
- 
+
 .row, .cell-content {
 	@include display(flex);
 }
@@ -42,7 +42,7 @@
 .cell {
 	width: 100%;
 	text-align: center;
-	margin-top: $padding;	
+	margin-top: $padding;
 	@include bp(large) {
         margin-bottom: $padding;
         width: inherit;
@@ -57,7 +57,7 @@
 	& p {
 		margin-top: 0;
 		& + p {
-			margin-bottom: $padding; 
+			margin-bottom: $padding;
 		}
 	}
 	& h1, h2, h3 {
@@ -65,7 +65,7 @@
 	}
 }
 
-/* Cell ratio */ 
+/* Cell ratio */
 .ratio1, .cell-fill  {
 	@include flex(1);
 }
@@ -78,15 +78,15 @@
 	@include flex(3);
 }
 
-/* Cell padding */ 
-.cell label, 
-.cell ._dragHandle, 
+/* Cell padding */
+.cell label,
+.cell ._dragHandle,
  {
 	margin: $padding/2;
-		
+
 }
 
-/* Cell border */ 
+/* Cell border */
 .cell-bt {
 	border-top : 1px solid $lightGray;
 }
@@ -106,7 +106,7 @@
 	@extend .cell-bl;
 }
 
-/* Grid rows & cells */ 
+/* Grid rows & cells */
 .grid {
 	& > .row {
 		&:first-child {
@@ -117,7 +117,7 @@
 			border-bottom: none;
 		}
 		& .butn {
-			@include bp(large) {
+			@include bp(medium) {
 				margin-bottom: 0;
 			}
 			margin-bottom: $padding;
@@ -167,7 +167,7 @@ and (max-width : 480px){
 		& .cell-content {
 			display: inherit;
 		}
-	
+
 		&:first-child {
 			margin-top: 0;
 			margin-bottom: 0;

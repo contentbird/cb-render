@@ -38,7 +38,7 @@ textarea {
 }
 
 body {
-    @include bp(large) {
+    @include bp(medium) {
         font-size: $smallSizeText;
     }
     font-size: $verysmallSizeText;
