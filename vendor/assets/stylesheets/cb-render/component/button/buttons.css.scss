@@ -22,12 +22,12 @@
     }
     &.action{
         background-color: $blue;
-        border: 2px solid $blue;
     }
     &.togl-off {
         border: 2px solid $lightGray;
         background-color: $white;
         color: $gray;
+        padding: calc(#{$padding/2} - 1px);
         &:hover {
             border-color: $green;
             color: $gray;
@@ -48,9 +48,7 @@
         }
     }
     &.togl-on{
-        border: 2px solid $green;
         background-color: $green;
-
         margin-bottom: 1px;
     }
     &.combo-l, &.combo-r {
@@ -110,8 +108,6 @@
 .butn-no-text {
     @extend .butn;
     padding-right: 0;
-    border: 2px solid $gray;
-
 }
 
 .butn-close {
