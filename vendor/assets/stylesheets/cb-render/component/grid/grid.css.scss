@@ -40,19 +40,14 @@
 }
 
 .cell {
+	@include bp(medium) {
+        margin-bottom: $padding;
+        width: inherit;
+        text-align: left;
+    }
 	width: 100%;
 	text-align: center;
 	margin-top: $padding;
-	@include bp(large) {
-        margin-bottom: $padding;
-        width: inherit;
-        text-align: inherit;
-    }
-    @include bp(medium) {
-        margin-bottom: $padding;
-        width: inherit;
-        text-align: inherit;
-    }
 	word-wrap:break-word;
 	& p {
 		margin-top: 0;
