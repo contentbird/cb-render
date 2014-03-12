@@ -21,11 +21,14 @@
         text-transform: none;
         vertical-align: top;
         -webkit-font-smoothing: antialiased;
-        margin-right: $padding/2;
     }
     &:hover {
         opacity: 0.8;
     }
+}
+
+[data-icon].butn:before  {
+    margin-right: $padding/2;    
 }
 
 [data-icon].accountLink:before {
