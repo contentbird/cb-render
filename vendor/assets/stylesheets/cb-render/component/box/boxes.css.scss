@@ -12,6 +12,7 @@ CSS GUIDE
 .box {
 	background: $white;
 	padding: $padding;
+	word-wrap: break-word;
 	& h2 {
 		margin: 0; 
 		padding: 0;
