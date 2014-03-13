@@ -215,10 +215,25 @@ h2, h3, h4, h5, h6 {
 	bottom: 1.375rem;
 }
 
-.show-time {
+.show-time {	
+	font-size: $verysmallSizeText;
+	&:after {
+		display: block;
+		height: 0;
+		width: 0;
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		border-bottom: 10px solid #333333;
+		position: absolute;
+		top: -10px;
+		right: 0;
+		left: 12px;
+		content: '';
+	}
 	@include bp(medium) {
 		position: absolute;
-		margin-top: 60px;
+		margin-top: 54px;
+		margin-left: $padding/2;
 	}
 	background-color: $darkGray;
 	color: $white;
@@ -229,14 +244,18 @@ h2, h3, h4, h5, h6 {
 	& .butn {
 		border-radius: 0;
 		border-bottom: 1px solid $white;
+		cursor: pointer;
 		&.active {
 			background-color: $orange;
 		}
 	}
-	& .cell .butn {
-		@include bp(medium) {
-			margin-left: 0;
-			border-bottom: none;
+	& .cell {
+		margin: 0;
+		& .butn {
+			@include bp(medium) {
+				margin-left: 0;
+				border-bottom: none;
+			}
 		}
 	}
 	
