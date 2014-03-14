@@ -215,7 +215,7 @@ h2, h3, h4, h5, h6 {
 	bottom: 1.375rem;
 }
 
-.show-time {	
+.show-time {
 	font-size: $verysmallSizeText;
 	&:after {
 		display: block;
@@ -242,10 +242,14 @@ h2, h3, h4, h5, h6 {
 	& .row {
 		@include flex-direction(row);
 	}
+    & a {
+        color: $white;
+    }
 	& .butn {
 		border-radius: 0;
 		border-bottom: 1px solid $white;
 		cursor: pointer;
+        margin-bottom: 0;
 	}
 	& .cell {
 		margin: 0;
@@ -256,5 +260,5 @@ h2, h3, h4, h5, h6 {
 			}
 		}
 	}
-	
+
 }
