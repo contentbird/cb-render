@@ -23,6 +23,9 @@
     &.action{
         background-color: $blue;
     }
+    &.active {
+        background-color: $orange;
+    }
     &.togl-off {
         border: 2px solid $lightGray;
         background-color: $white;
@@ -54,8 +57,7 @@
     &.combo, &.combo-l, &.combo-r {
         float: left;
     }
-    &.combo-l._timePublication {
-        @extend .togl-on;
+    &.combo-l {
         @include bp(medium) {
             border-top-right-radius: 0;
             border-bottom-right-radius: 0;
@@ -64,9 +66,6 @@
         }
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
-        &.end {
-            background-color: $orange;
-        }
     }
     &.combo {
        &.togl-on {
@@ -76,8 +75,7 @@
         border-radius: 0;
        } 
     }
-    &.combo-r._seePublication {
-        @extend .togl-on;
+    &.combo-r {
         @include bp(medium) {
             border-top-left-radius: 0;
             border-bottom-left-radius: 0;
@@ -120,6 +118,9 @@
 .butn-no-text {
     @extend .butn;
     padding-right: 0;
+    &.active {
+        background-color: $orange;
+    }
 }
 
 .butn-close {

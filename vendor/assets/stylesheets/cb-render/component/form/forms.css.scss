@@ -232,7 +232,7 @@ textarea {
 }
 
 /* options panel */
-.optionsPanel, .optionsHide {
+.optionsPanel, .butn.optionsHide {
 	display: none;
 }
 
@@ -240,11 +240,11 @@ textarea {
 	display: block;
 }
 
-.optionsVisible .optionsHide {
+.optionsVisible .butn.optionsHide {
 	display: inline-block;
 }
 
-.optionsVisible .optionsShow {
+.optionsVisible .butn.optionsShow {
 	display: none;
 }
 

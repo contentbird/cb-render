@@ -219,6 +219,7 @@ h2, h3, h4, h5, h6 {
 	@include bp(medium) {
 		position: absolute;
 		margin-top: 60px;
+		padding-bottom: 10px;
 	}
 	background-color: $darkGray;
 	color: $white;
@@ -229,9 +230,6 @@ h2, h3, h4, h5, h6 {
 	& .butn {
 		border-radius: 0;
 		border-bottom: 1px solid $white;
-		&.active {
-			background-color: $orange;
-		}
 	}
 	& .cell .butn {
 		@include bp(medium) {
