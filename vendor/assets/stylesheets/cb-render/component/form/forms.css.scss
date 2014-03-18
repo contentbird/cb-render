@@ -39,7 +39,10 @@ textarea, select  {
 	-webkit-backface-visibility: hidden;
 }
 
-input[type="search"]{
+input[type="search"] {
+	@include bp(medium) {
+		text-align: left;
+	}
 	padding: $padding/2;
 	width: 100%;
 	border: none;
@@ -50,6 +53,8 @@ input[type="search"]{
 	&:focus {
 		outline: 0;
 	}
+	text-align: center;
+	margin-bottom: $padding;
 }
 
 select {
