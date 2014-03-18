@@ -105,16 +105,18 @@
 /* Grid rows & cells */
 .grid {
 	& > .row {
-		@include bp(medium) {
-			padding-top: 0;	
-		}
-		padding-top: 40px;
 		&:first-child {
 			border-top: 1px solid $lightGray;
 		}
 		border-bottom: 1px solid $lightGray;
 		&.with-sub-row {
 			border-bottom: none;
+		}
+		&.with-butn-mob {
+			@include bp(medium) {
+				padding-top: 0;
+			}
+			padding-top: 40px;
 		}
 		& .butn {
 			@include bp(medium) {
