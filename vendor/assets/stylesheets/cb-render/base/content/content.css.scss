@@ -223,7 +223,7 @@ h2, h3, h4, h5, h6 {
 		margin-top: 54px;
 		margin-left: $padding/2;
 		padding: $padding/2;
-		min-width: 250px;
+		width: 250px;
 		&:after {
 			display: block;
 			height: 0;
