@@ -133,17 +133,38 @@ header .butn {
     margin-top: 0;
 }
 
-.butn-mob {
+.butn-mob-menu {
     @include bp(medium) {
-        position: relative;  
-        width: inherit;     
-    }
-    @include display(flex);
-    @include flex-direction(row);
-    width: 100%;
+        display: none;
+    } 
     position: absolute;
-    top: 0;
-    left: 0;
+    right: 0;
+}
+
+.butn-mob {
+     &:after {
+        display: block;
+        height: 0;
+        width: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #333333;
+        position: absolute;
+        top: -10px;
+        right: 0;
+        content: '';
+    }
+    @include bp(medium) {
+        display: block;
+        background-color: inherit;
+        width: inherit;
+        position: relative;
+        top: inherit;
+        padding: inherit;
+        &:after {
+            display: none;
+        }
+    }  
     & .butn {
         @include bp(medium) {
             margin-right: 0;     
@@ -153,6 +174,16 @@ header .butn {
             margin-right: 0;
         }
     }
+    background-color: $darkGray;
+    padding: $padding;
+    padding-bottom: 0;
+    position: absolute;
+    width: 100%;
+    top: 40px;
+    left: 0;
+    z-index: 20000;
+   
+    
 }
 
 .image-add {

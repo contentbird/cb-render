@@ -42,13 +42,11 @@
 
 .cell {
 	@include bp(medium) {
-        margin-bottom: $padding;
         width: inherit;
         text-align: left;
     }
 	width: 100%;
 	text-align: center;
-	margin-top: $padding;
 	word-wrap:break-word;
 	& p {
 		margin-top: 0;
@@ -58,6 +56,17 @@
 	}
 	& h1, h2, h3 {
 		margin-top: 0;
+	}
+	&:first-child {
+		& .butn:first-child {
+			@include bp(medium) {
+				margin-left: 0;
+			}
+			margin-left: $padding/2; 
+		}
+	}
+	& .butn {
+		margin-left: $padding/2; 
 	}
 }
 
@@ -107,32 +116,28 @@
 	& > .row {
 		&:first-child {
 			border-top: 1px solid $lightGray;
+
 		}
+		padding-top: $padding/2;
+		padding-bottom: $padding/2;
 		border-bottom: 1px solid $lightGray;
 		&.with-sub-row {
 			border-bottom: none;
 		}
 		&.with-butn-mob {
-			@include bp(medium) {
-				padding-top: 0;
+			& .cell {
+				text-align: left;
 			}
-			padding-top: 40px;
 		}
 		& .butn {
 			@include bp(medium) {
 				margin-bottom: 0;
 			}
 		}
+
 	}
 	& .sub-row {
-		@include bp(medium) {
-			margin-bottom: 0;	
-		}
 		border-bottom: 1px solid $lightGray;
-		margin-bottom: $padding;
-		& .cell {
-			margin: 0;
-		}
 	}
 	& .cell p {
 		margin-bottom: 0;
@@ -140,15 +145,6 @@
 	}
 }
 
-.grid-no-border {
-	@extend .grid;
-	& > .row {
-		&:first-child {
-			border: none;
-		}
-		border: none;
-	}
-}
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen

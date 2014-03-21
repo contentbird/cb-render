@@ -164,16 +164,6 @@ input[type="text"].h5fRequired.formTitle {
 	width: 100%;
 }
 
-
-.cell .butn {
-	@include bp(large) {
-        margin-left: $padding/2;
-    }
-    @include bp(medium) {
-        margin-left: $padding/2;
-    }
-}
-
 /* input type file */
 .fileinput-button {
 	position: absolute;
