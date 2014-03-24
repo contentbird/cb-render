@@ -38,7 +38,7 @@ module ContentHelper
             data['value'].each do |image|
               concat(content_tag(:li, nil, class: "image-container _imageContainer", data: {image: image['url'], legend: image['legend']}) do
                 content_tag :figure do
-                  content_tag :div, class: 'image-content', style: "background-image: url(#{thumbnail_url(image['url'])}); padding-bottom: 30px" do
+                  content_tag :div, class: 'image-content', style: "background-image: url(#{protocol_prefix + thumbnail_url(image['url'])}); padding-bottom: 30px" do
                     if image['legend'].present?
                       content_tag :figcaption do
                         image['legend']
@@ -155,5 +155,9 @@ module ContentHelper
   def thumbnail_url url
     return nil if url.nil?
     url.gsub(/(?<path>.*)\.([a-z|A-Z]*)$/, '\k<path>_thumb.jpg')
+  end
+
+  def protocol_prefix
+    request.ssl? ? 'https:' : 'http:'
   end
 end
