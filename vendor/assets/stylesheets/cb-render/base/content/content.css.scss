@@ -249,21 +249,20 @@ h2, h3, h4, h5, h6 {
         color: $white;
     }
 	& .butn {
-		@include bp(medium) {
-			border-right: 1px solid $darkGray;
-		}
+		border-right: 1px solid $darkGray;
 		border-radius: 0;
 		border-bottom: 1px solid $white;
 		cursor: pointer;
         margin-bottom: 0;
         width: 100%;
-
+        
 	}
 	& .cell {
 		text-align: center;
 		& .butn {
 			@include bp(medium) {
 				border-bottom: none;
+				margin-left: 0;
 			}
 		}
 	}
