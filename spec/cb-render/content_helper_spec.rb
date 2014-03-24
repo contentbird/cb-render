@@ -22,6 +22,11 @@ describe ContentHelper do
   end
 
   describe '#display_content_property' do
+    it 'renders nothing if value attribute of given content property is nil or empty' do
+      display_content_property('text_prop', {'title' => 'Text property', 'value' => '', 'type' => 'text'}).should be_nil
+      display_content_property('image_prop', {'title' => 'Image property', 'value' => nil, 'type' => 'image'}).should be_nil
+    end
+
     it 'renders text properties with their label and no transformation' do
       rendered = display_content_property('text_prop', {'title' => 'Text property', 'value' => 'this is text', 'type' => 'text'})
       rendered.should eq '<p class="cb-type-text cb-prop-text_prop ">Text property: this is text</p>'

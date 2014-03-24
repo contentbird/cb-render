@@ -7,6 +7,7 @@ module ContentHelper
   end
 
   def display_content_property name, data, options={}
+    return nil unless data['value'].present?
     self.send("display_#{data['type']}_property", name, data, options)
   end
 
