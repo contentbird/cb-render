@@ -19,6 +19,14 @@ module ContentHelper
     end
   end
 
+  def first_image_thumbnail_url name, data, options={}
+    if data['type'] == 'image_gallery'
+      thumbnail_url(data['value'].first['url'])
+    elsif data['type'] == 'image'
+      thumbnail_url(data['value'])
+    end
+  end
+
   def display_image_gallery_property name, data, options={}
     if options[:summary]
       display_first_gallery_image name, data, options
