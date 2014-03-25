@@ -20,7 +20,7 @@ module ContentHelper
   end
 
   def first_image_thumbnail_url name, data, options={}
-    if data['type'] == 'image_gallery'
+    if data['type'] == 'image_gallery' && data['value'].present? && data['value'].any?
       thumbnail_url(data['value'].first['url'])
     elsif data['type'] == 'image'
       thumbnail_url(data['value'])
