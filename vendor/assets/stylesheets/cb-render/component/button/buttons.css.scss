@@ -136,7 +136,7 @@ header .butn {
 .butn-mob-menu {
     @include bp(medium) {
         display: none;
-    } 
+    }
     position: absolute;
     right: 0;
 }
@@ -164,10 +164,10 @@ header .butn {
         &:after {
             display: none;
         }
-    }  
+    }
     & .butn {
         @include bp(medium) {
-            margin-right: 0;     
+            margin-right: 0;
         }
         margin-right: $padding/2;
         &:last-child {
@@ -182,8 +182,10 @@ header .butn {
     top: 40px;
     left: 0;
     z-index: 20000;
-   
-    
+    display: none;
+    &.show {
+        display: block;
+    }
 }
 
 .image-add {
