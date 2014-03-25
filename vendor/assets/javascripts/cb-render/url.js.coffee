@@ -17,6 +17,17 @@ identifyPlayerAndItemId = (url) ->
   return ['youtube',    RegExp.$1]                  if url.match /^(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/
   return ['soundcloud', url      ]                  if url.match /^(?:https?:\/\/)?(?:www\.)?soundcloud\.com\/.*$/
   return ['spotify', RegExp.$1.replace(/\//g, ':')] if url.match /^(?:https?:\/\/)?(?:open\.)?spotify\.com\/(.*)$/
+  if url.match /^(?:https?:\/\/)?(?:www\.)?deezer\.com\/(track|playlist|album)\/(\d*)$/
+    type = RegExp.$1
+    id   = RegExp.$2
+    if type == 'track'
+      type   = 'tracks'
+      list   = false
+      height = 80
+    else
+      list   = true
+      height = 300
+    return ['deezer', {type: type, id: id, list: list, height: height}]
   return [null,         null]
 
 renderPlayer = (link, playerName, itemId) ->
