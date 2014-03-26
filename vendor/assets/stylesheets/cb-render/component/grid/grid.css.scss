@@ -44,7 +44,9 @@
 	@include bp(medium) {
         width: inherit;
         text-align: left;
-
+        &.cTxt {
+        	text-align: center;
+        }
     }
 	width: 100%;
 	text-align: center;
