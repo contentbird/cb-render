@@ -19,6 +19,12 @@ module ContentHelper
     end
   end
 
+  def display_image name, image_url, alt, options={}
+    content_tag :figure, class: "cb-type-image cb-prop-#{name} #{options[:wrapper_class]}" do
+      image_tag image_url, alt: alt
+    end
+  end
+
   def first_image_thumbnail_url name, data, options={}
     if data['type'] == 'image_gallery' && data['value'].present? && data['value'].any?
       thumbnail_url(data['value'].first['url'])
