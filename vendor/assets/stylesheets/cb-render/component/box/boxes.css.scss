@@ -20,6 +20,9 @@ CSS GUIDE
 	&.transparent {
 		background: transparent;
 	}
+	&.lightGray {
+		background: $lightGray;
+	}
 }
 
 /* box sub-modules */
