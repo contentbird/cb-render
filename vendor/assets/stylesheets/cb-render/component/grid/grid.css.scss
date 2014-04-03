@@ -18,7 +18,7 @@
 }
 
 .row {
-	@include bp(large) {
+	@include bp(medium) {
 		@include flex-flow;
 	}
 	position: relative;
