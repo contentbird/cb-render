@@ -128,10 +128,7 @@
      right: $padding;
 }
 
-header .butn {
-    float: right;
-    margin-top: 0;
-}
+
 
 .butn-mob-menu {
     @include bp(medium) {

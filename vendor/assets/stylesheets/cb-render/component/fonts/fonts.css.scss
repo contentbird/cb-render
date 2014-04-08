@@ -25,6 +25,15 @@
     &:hover {
         opacity: 0.8;
     }
+    &.bullet {
+    font-size: $largeSizeText;   
+    color: $gray;
+    text-align: center;
+    margin: $padding;
+    &:hover {
+        color: lightGray;
+    }
+}
 }
 
 [data-icon].butn:before  {
@@ -34,7 +43,6 @@
 [data-icon].accountLink:before {
     background-color: $gray;
     @include roundedBorders;
-
 }
 
 nav [data-icon] {
@@ -44,16 +52,6 @@ nav [data-icon] {
 
 .features [data-icon] {
     font-size: 2rem;   
-    color: $gray;
-    text-align: center;
-    margin: $padding;
-    &:hover {
-        color: lightGray;
-    }
-}
-
-.dashboard [data-icon] {
-    font-size: $largeSizeText;   
     color: $gray;
     text-align: center;
     margin: $padding;
