@@ -26,7 +26,7 @@
         opacity: 0.8;
     }
     &.bullet {
-    font-size: $largeSizeText;   
+    font-size: $largeSizeText;
     color: $gray;
     text-align: center;
     margin: $padding;
@@ -37,7 +37,7 @@
 }
 
 [data-icon].butn:before  {
-    margin-right: $padding/2;    
+    margin-right: $padding/2;
 }
 
 [data-icon].accountLink:before {
@@ -51,7 +51,7 @@ nav [data-icon] {
 
 
 .features [data-icon] {
-    font-size: 2rem;   
+    font-size: 2rem;
     color: $gray;
     text-align: center;
     margin: $padding;
@@ -90,10 +90,16 @@ nav [data-icon]:before {
     color: $darkGray;
 }
 
-.check { 
+.check {
     color: $green;
     cursor: pointer;
     &[data-icon]:before {
-        font-size: $mediumSizeText; 
+        font-size: $mediumSizeText;
     }
+}
+
+.notabene {
+    font-size: $verysmallSizeText;
+    color: $gray;
+    font-style: italic;
 }
