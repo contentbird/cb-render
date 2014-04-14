@@ -25,9 +25,14 @@ CSS GUIDE
 	}
 }
 
-/* box sub-modules */
+
 .box-hd {
 	padding-bottom: $padding;
+    &:after {
+        content: '';
+        display:block;
+        clear: both;
+    }
 }
 
 .box-bd {

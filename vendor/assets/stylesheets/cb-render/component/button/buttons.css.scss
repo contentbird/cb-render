@@ -123,12 +123,10 @@
 }
 
 .butn-close {
-     @extend .butn-no-text;
-     position: absolute;
-     right: $padding;
+    @extend .butn-no-text;
+    float: right;
+
 }
-
-
 
 .butn-mob-menu {
     @include bp(medium) {
