@@ -26,3 +26,11 @@
     from {-webkit-transform: rotate(0deg);}
     to   {-webkit-transform: rotate(360deg);}
 }
+
+/* animation */
+@mixin animation($name, $duration, $iteration) {
+    -webkit-animation: $name $duration $iteration;
+       -moz-animation: $name $duration $iteration;
+         -o-animation: $name $duration $iteration;
+            animation: $name $duration $iteration;
+}
