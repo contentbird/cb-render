@@ -40,7 +40,7 @@ module ContentHelper
       options  = default_options.merge(options)
       if data['value'].present?
         content_tag :div, class: "row cb-type-img_gal cb-prop-#{name}" do
-          content_tag :ul, class: "_images" do
+          content_tag :ul, class: "_images gal-images" do
             data['value'].each do |image|
               concat(content_tag(:li, nil, class: "image-container _imageContainer", data: {image: image['url'], legend: image['legend']}) do
                 content_tag :figure do
