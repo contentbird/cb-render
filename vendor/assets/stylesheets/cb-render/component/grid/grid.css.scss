@@ -24,6 +24,7 @@
 	position: relative;
 }
 
+
 /* fallback flexbox wrap Firefox < 28 */
 @supports not (flex-wrap: wrap) {
 	.publications .row .cell {

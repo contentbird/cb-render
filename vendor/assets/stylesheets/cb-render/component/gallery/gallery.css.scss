@@ -1,6 +1,28 @@
+._images {
+    @include display(flex);
+    @include flex-flow;
+    width: 100%;
+}
+
+/* fallback flexbox wrap Firefox < 28 */
+@supports not (flex-wrap: wrap) {
+    .image-container  {
+        float: left;
+    }
+    .image-container  {
+        display: inline-block;
+    }
+}
+
+@supports (flex-wrap: wrap) {
+    .image-container  {
+        float: none;
+    }
+}
+
 .image-container {
     position: relative;
-    float: left;
+ 
     margin: $padding/4;
     max-width: 100%;
     width: 300px;
