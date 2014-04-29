@@ -22,7 +22,8 @@ CSS GUIDE
 	box-sizing: border-box;
 }
 
-html {
+html,
+body {
 	height: 100%;
 }
 
@@ -44,16 +45,11 @@ body {
     font-size: $verysmallSizeText;
   	margin: 0;
   	padding: 0;
-	height: 100%;
 	color: $black;
 }
 
 img {
 	max-width: 100%;
-}
-
-.main, .page {
-	min-height: 100%;
 }
 
 /* links */
